@@ -420,7 +420,7 @@ pre code {
 .parent {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   /* Extra small devices (phones, less than 768px) */ }

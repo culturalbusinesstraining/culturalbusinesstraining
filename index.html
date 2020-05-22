@@ -29,11 +29,28 @@
   <!-- Theme CSS -->
   <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="assets/css/flickity.css">
+  <link rel="stylesheet" href="assets/css/zoom.css">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+  
+  <!-- Javascript -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script data-main="/assets/js/config.js" src="/assets/js/require.js"></script>
+  <script>
+    require(['config'], function(){
+      require(['jquery.min']);
+      require(['bootstrap.min']);
+      require(['popper.min']);
+      require(['jquery.scrollTo.min']);
+      require(['flickity.pkgd.min']);
+      require(['transition']);
+      require(['zoom']);
+      require(['main']);
+    });
+  </script>
 </head>
 
 
@@ -64,7 +81,7 @@
               <li class="nav-item"><a class="scrollto" href="#calendar">Next Events</a></li>
               <li class="nav-item"><a class="scrollto" href="#stories">Stories</a></li>
               <li class="nav-item"><a class="scrollto" href="#crew">Crew</a></li>
-              <li class="nav-item last"><a class="scrollto highlight" href="#tcf">Tampere Cultural Festival</a></li>
+              <li class="nav-item last"><a class="scrollto highlight" href="#guide">Guide</a></li>
             </ul><!--//nav-->
           </div><!--//navabr-collapse-->
         </nav><!--//main-nav-->
@@ -114,141 +131,151 @@
     <section id="calendar" class="calendar section">
       <div class="container">
         <h2 class="title text-center">Next Events</h2>
-        <p class="text-center"></p>
-        <p class="intro text-center"><span><img alt="" border="0" src="assets/images/program.png" width="100%" height="50%"></span></p>
+        <p class="intro text-center"><span><img alt="" border="0" src="assets/images/programcovid.png" width="100%" height="50%" data-action="zoom"></span></p>
         <div class="row">
           <h4 class="sub-title text-center">Past Events</h4>
-          <div class="col-sm-1 col-sm-offset-1 text-left text-left-sm">
-            <em>10.12.2019 Pikkujoulu</em>
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fvideos%2F534364337153677%2F&show_text=0&width=250" width="250" height="115" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+          <div class="col-sm-1 text-left text-left-sm text-center">
+            <em>10.12.2019 Pikkujoulu</em></br>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fvideos%2F534364337153677%2F&show_text=0&width=250" width="250" height="115" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" id="iframe"></iframe>
           </div>
-          <div class="col-sm-1 col-sm-offset-2 text-left text-left-sm">
-            <em>22.1.2020 Evira</em>
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fvideos%2F545140376134911%2F&show_text=0&width=250" width="250" height="115" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+          <div class="col-sm-1 col-sm-offset-2 text-left text-left-sm text-center">
+            <em>22.1.2020 Evira</em></br>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fvideos%2F545140376134911%2F&show_text=0&width=250" width="250" height="115" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" id="iframe"></iframe>
           </div>
-          <div class="col-sm-1 col-sm-offset-2 text-left text-left-sm">
-            <em>17.2.2020 Business&nbsp;Planning</em>
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fvideos%2F239485887050818%2F&show_text=0&width=250" width="250" height="115" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+          <div class="col-sm-1 col-sm-offset-2 text-left text-left-sm text-center">
+            <em>17.2.2020 Business&nbsp;Planning</em></br>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fvideos%2F239485887050818%2F&show_text=0&width=250" width="250" height="115" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" id="iframe"></iframe>
+          </div>
+          <div class="col-sm-1 col-sm-offset-2 text-left text-left-sm text-center">
+            <em>11.3.2020 Online&nbsp;presence</em></br>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fvideos%2F160343268374621%2F&show_text=0&width=250" width="250" height="115" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" id="iframe"></iframe>
           </div>
         </div>
       </div><!--//container-->
     </section><!--//calendar-->
 
-     <!-- ******ABOUT****** -->
+    <!-- Guide -->
+    <section id="guide" class="festival section">
+      <div class="container text-center">
+        <h2 class="title">Guide</h2>
+        <div class="text-center" style="color: white;">
+          <p>Final guide book of the CBT session for those curious of starting their own business is now available and ready for download.</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 text-right text-right-sm">
+            <p style="color: white;">In our guide we tell you:</p>
+            <ul style="color: white;">
+              <li style="list-style-type:none">What is CBT? Contact information Where to find us</li></br>
+              <li style="list-style-type:none">About Food Control Authority and of Entrepreneur's permits and notifications</li></br>
+              <li style="list-style-type:none">Why and how should on go about writing a business plan</li></br>
+              <li style="list-style-type:none">How to establish digital presence for marketing purposes and a marketing checklist</li></br>
+              <li style="list-style-type:none">Glimpse to the member entrepreneur businesses</li></br>
+              <a href="assets/Starter-Guide-for-Food-Business.pdf" target="_blank"><button style="color: orange;">Download</button></a>
+            </ul>
+            <p style="color: white;"><em>CBT is working on the following initiatives the Spring has brought to us. Stay tuned, you will hear about it soon!</em></p>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+              <div> <p class="shape"><span><a href="assets/Starter-Guide-for-Food-Business.pdf" target="_blank"><img alt="" border="0" src="assets/images/guide.png" width="100%" height="50%"></a></span></p></div>
+          </div>
+          
+        </div>
+        </div>
+      </div><!--//container-->
+    </section><!--//how-->
+
+     <!-- ******STORIES****** -->
      <section id="stories" class="stories section">
       <div class="container text-center">
         <h2 class="title">Stories</h2>
         <div class="row">
           <!-- Flickity HTML init -->
+          <!-- New post at the top -->
           <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": true,  "freeScroll": true  }'>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F161738385281991&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F159340135521816&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F157051062417390&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F154856142636882&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F150073276448502&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F148087906647039&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F145791676876662&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F143106737145156&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
-          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F140231310766032&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F168798114576018&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F163732818415881&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F161738385281991&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F159340135521816&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F157051062417390&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F154856142636882&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F150073276448502&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F148087906647039&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F145791676876662&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F143106737145156&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
+          <div class="gallery-cell"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fculturalbusinesstraining%2Fposts%2F140231310766032&width=350" width="350" height="611" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="iframe"></iframe></div>
           </div>
         </div>
       </div><!--//container-->
-    </section><!--//about-->
+    </section><!--//Stories-->
 
     <!-- ******TAMPERE CULTURE FESTIVAL****** -->
     <section id="tcf" class="festival section text-center">
       <div class="container">
-          <p class="text-center"><span><img alt="" border="0" src="assets/images/TCF-Postertime.png" width="100%" height="50%"></span> </p>
           <div class="parent festival-inner">
-          <div class="top-child">
-            <div> <p class="shape"><span><img alt="" border="0" src="assets/images/asdas.png" width="100%" height="50%"></span></p></div>
-            <div class="info">
-              <div class="text-left">
-                <div class="tabs">
-                  <div class="tab-2">
-                    <label for="tab2-1">English</label>
-                    <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
-                    <div>
-                      <p>Cultural Business Training has the pleasure to present: 
-                      TAMPERE CULTURAL FESTIVAL!
-                      A unique opportunity to taste a diverse gastronomy culture from all over the world right here at the most traditional market place in Tampere since 1900 - Tammelantori!</p>
-                              <p>Facilitated 6 hours of entertainment like never before!</br>
-                      Food from local pop-up cooks and existing restaurants. </br>
-                      Music and dance presented by different culture artists and groups. </br>
-                      Opinions and expertise from cross-board business perspective.</br>
-                      Workshops and other interesting activities for visitors.</p>
-                      <p>The event is organised to support our local businesses and more than ever the effort to promote and preserve the foreign cultures in Tampere. For a multicultural Manse town!</p>
-                      <p>Schedule of the day:</br>
-                      11:00 Opening / Multicultural hour</br>
-                      12:00 Europe</br>
-                      13:00 Latin-America</br>
-                      14:00 Middle East</br>
-                      15:00 Asia</br>
-                      16:00 Africa</br>
-                      Details about cooks, represented restaurants and business, artists and performers will be informed later.</p>
-                      <p>The event is organized with the support of The City of Tampere. </p>
-                    </div>
-                    </div>
-                    <div class="tab-2">
-                      <label for="tab2-2">Suomeksi</label>
-                      <input id="tab2-2" name="tabs-two" type="radio">
-                      <div>
-                        <p>Cultural Business Training kokonaisuus tarjoaa:
-                        TAMPERE CULTURAL FESTIVAL ruokatapahtuma!
-                        Ainutlaatuinen tilaisuus maistaa monipuolista gastronomiakulttuuria kaikkialta maailmalta Tampereen perinteisimmällä markkinoilla vuodesta 1900 lähtien – Tammelantorilla!</p>
-                                <p>6 tuntia viihdettä - enemmän kuin koskaan ennen!</br>
-                        Ruokaa paikallisilta pop-up-kokeilta ja olemassa olevilta ravintoloitsijoilta.</br>
-                        Eri kulttuuritaiteilijoiden ja ryhmien esittämää musiikkia ja tanssia.</br>
-                        Mielipiteitä ja asiantuntemusta rajoja ylittävän liiketoiminnan näkökulmasta.</br>
-                        Työpajoja ja muita mielenkiintoisia aktiviteetteja vierailijoille.</p>
-                        <p>Yllätyslahjoja ja nopeita tarjouksia, joita et voi jättää väliin!</p>
-                        <p>Tapahtuma on järjestetty tukemaan paikallisia yrityksiämme ja tapahtumassa on enemmän kuin koskaan pyrkimyksiä edistää ja säilyttää ulkomaisia kulttuureja Tampereella. Monikulttuuriseen Manse-kaupunkiin!</p>
-                        <p>Päiväohjelma:</br>
-                        11:00 Avajaiset / Monikulttuurisuus</br>
-                        12:00 Eurooppa</br>
-                        13:00 Latinalainen Amerikka</br>
-                        14:00 Lähi-Itä</br>
-                        15:00 Aasia</br>
-                        16:00 Afrikka</br>
-                        Tietoja kokeista, edustetuista ravintoloista ja yrityksistä, taiteilijoista ja esiintyjistä ilmoitetaan myöhemmin.</p>
-                        <p>Tapahtuma järjestetään yhteistyössä Tampereen kaupungin kanssa.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <ul class="text-left social-icons list-inline">
-                <li><span class="fb-share-button" data-href="https://www.facebook.com/events/2235396536766383/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fevents%2F2235396536766383%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></span></li>
-                <li class="last"><a href="https://www.facebook.com/events/2235396536766383/" target="_blank">FB Event</a></li class="last">
-              </ul>
-            </div><!--//info-->
-          </div><!--//top-child-->
-          <div class="bottom-child">
+        
             <div class="text-left">
               <h4 class="festival sub-title">Sponsors</h4>
             </div>
             <div class="cta-container">
-              <span style="display: inline-block;"><a href="https://www.tampere.fi/en/index.html" target="_blank"><img alt="" border="0" src="assets/images/tampere.png" width="85%" height="50%"></a></span>
-              <span><a href="https://www.tampere.fi/tampereen-kaupunki/organisaatio/sivistyspalvelujen-palvelualue/kulttuuri-ja-vapaa-aikapalvelut/kulttuuri-ja-taideyksikko/kulttuuripalvelut.html" target="_blank"><img alt="" border="0" src="assets/images/tamperefinland.png" width="45%" height="37%"></a></span>
-              <span><a href="http://www.tampere.fi/internationalhub" target="_blank"><img alt="" border="0" src="assets/images/InternationalHub.jpg" width="45%" height="50%"></a></span>
+              <div class="row">
+                <div class="column">
+                  <a href="https://www.tampere.fi/en/index.html" target="_blank"><img alt="" border="0" src="assets/images/tampere.png" alt="tampere" style="width:100%"></a>
+                </div> 
+                <div class="column">
+                  <a href="https://www.tampere.fi/tampereen-kaupunki/organisaatio/sivistyspalvelujen-palvelualue/kulttuuri-ja-vapaa-aikapalvelut/kulttuuri-ja-taideyksikko/kulttuuripalvelut.html" target="_blank"><img alt="" border="0" src="assets/images/tamperefinland.png" alt="tamperefinland" style="width:100%"></a>
+                </div>
+                <div class="column">
+                  <a href="http://www.tampere.fi/internationalhub" target="_blank"><img alt="" border="0" src="assets/images/InternationalHub.jpg" alt="InternationalHub" style="width:100%"></a>
+                </div>
+              </div>
              </div><!--//cta-container-->
             <div class="text-left">
               <h4 class="festival sub-title">Partners</h4>
             </div>
             <div class="cta-container">
-              <span><img alt="" border="0" src="assets/images/BusinessEngine.png" width="30%" height="50%"></span>
-              <span><a href="https://imagem.is/" target="_blank"><img alt="" border="0" src="assets/images/imagem.png" width="17%" height="30%"></a></span>
-              <span><a href="https://www.facebook.com/festibalFinlandia" target="_blank"><img alt="" border="0" src="assets/images/festIBAL.png" width="55%" height="50%"></a></span>
-              <span><img alt="" border="0" src="assets/images/FIFsquare180.png" width="30%" height="50%"></span>
-              <span style="margin-top: 20px;"><img alt="" border="0" src="assets/images/crispymania.png" width="44%" height="50%"></span>
-              <span><a href="https://www.456degrees.fi/" target="_blank"><img alt="" border="0" src="assets/images/456degrees.png" width="30%" height="40%"></a></span>
-              <span><img alt="" border="0" src="assets/images/pinta.png" width="40%" height="50%"></span> 
-              <span><a href="http://afaes.fi/" target="_blank"><img alt="" border="0" src="assets/images/afaes.png" width="28%" height="50%"></a></span>
-              <span><a href="https://harritaito.com/" target="_blank"><img alt="" border="0" src="assets/images/htlogo.png" width="21%" height="37%"></a></span>
-              <span><a href="https://www.crazytown.fi/" target="_blank"><img alt="" border="0" src="assets/images/ct-logo-rgb.png" width="50%" height="50%"></a></span>
-              <span><a href="https://tribetampere.com/" target="_blank"><img alt="" border="0" src="assets/images/tribe.png" width="35%" height="50%"></a></span>
+              <div class="row">
+                <div class="column">
+                  <img src="assets/images/BusinessEngine.png" alt="BusinessEngine" style="width:100%">
+                </div>
+                <div class="column">
+                  <a href="https://imagem.is/" target="_blank"><img alt="" border="0" src="assets/images/imagem.png" alt="imagem" style="width:100%; padding-left: 23%; padding-right: 23%;"></a>
+                </div>
+                <div class="column">
+                  <a href="https://www.facebook.com/festibalFinlandia" target="_blank"><img alt="" border="0" src="assets/images/festIBAL.png" alt="imagem" style="width:100%"></a>
+                </div>
+              </div>
+                <div class="column">
+                  <img src="assets/images/FIFsquare180.png" alt="FIFsquare180" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="assets/images/crispymania.png" alt="crispymania" style="width:100%; margin-top:5em">
+                </div>
+                <div class="column">
+                  <img src="assets/images/pinta.png" alt="pinta" style="width:100%">
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <a href="https://www.crazytown.fi/" target="_blank"><img alt="" border="0" src="assets/images/ct-logo-rgb.png" alt="crazytown" style="width:100%"></a>
+                </div> 
+                <div class="column">
+                </div>
+                <div class="column">
+                  <a href="https://tribetampere.com/" target="_blank"><img alt="" border="0" src="assets/images/tribe.png" alt="tribetampere" style="width:100%"></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <a href="http://afaes.fi/" target="_blank"><img alt="" border="0" src="assets/images/afaes.png" alt="afaes" style="width:65%"></a>
+                </div>
+                <div class="column">
+                </div>
+                <div class="column">
+                  <a href="https://harritaito.com/" target="_blank"><img alt="" border="0" src="assets/images/htlogo.png" alt="harritaito" style="width:52%; margin-top:0.7em"></a>
+                </div>
+              </div>
             </div><!--//cta-container-->
-          </div><!--//bottom-child-->
+          <!-- </div> -->
+          <!--//bottom-child-->
         </div>
       </div><!--//container-->
     </section><!--//how-->
@@ -270,7 +297,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
                 <div class="profile"><img alt="" src="assets/images/profile/andruta.jpg" width="100%" height="100%"></div>
               </div>
@@ -280,7 +307,32 @@
                   <br><a href="https://www.linkedin.com/in/andruta-ilie-358b6669" target="_blank" class="fa fa-linkedin font-14"></a>
                 </p>
               </div>
+            </div> -->
+            
+
+            <div class="row">
+              <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+                <div class="profile"><img alt="" src="assets/images/profile/ramona.jpg" width="100%" height="100%"></div>
+              </div>
+              <div class="col-sm-5  text-left text-left-sm">
+                <p class="introduction">Ramona Bilmez
+                  <br><span class="job">managing support</span>
+                  <br><a href="https://fi.linkedin.com/in/ramona-bilmez" target="_blank" class="fa fa-linkedin font-14"></a>
+                </p>
+              </div>
             </div>
+            <div class="row">
+              <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+                <div class="profile"><img alt="" src="assets/images/profile/lorena.jpg" width="100%" height="100%"></div>
+              </div>
+              <div class="col-sm-5  text-left text-left-sm">
+                <p class="introduction">Lorena Vanquez
+                  <br><span class="job">digital designer</span>
+                  <br><a href="https://fi.linkedin.com/in/lorenafinland" target="_blank" class="fa fa-linkedin font-14"></a>
+                </p>
+              </div>
+            </div>
+            
             <div class="row">
               <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
                 <div class="profile"><img alt="" src="assets/images/profile/harri.jpg" width="100%" height="100%"></div>
@@ -303,28 +355,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
-                <div class="profile"><img alt="" src="assets/images/profile/lorena.jpg" width="100%" height="100%"></div>
-              </div>
-              <div class="col-sm-5  text-left text-left-sm">
-                <p class="introduction">Lorena Vanquez
-                  <br><span class="job">digital designer</span>
-                  <br><a href="https://fi.linkedin.com/in/lorenafinland" target="_blank" class="fa fa-linkedin font-14"></a>
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
-                <div class="profile"><img alt="" src="assets/images/profile/ramona.jpg" width="100%" height="100%"></div>
-              </div>
-              <div class="col-sm-5  text-left text-left-sm">
-                <p class="introduction">Ramona Bilmez
-                  <br><span class="job">managing support</span>
-                  <br><a href="https://fi.linkedin.com/in/ramona-bilmez" target="_blank" class="fa fa-linkedin font-14"></a>
-                </p>
-              </div>
-            </div>
+          
           </div>
           <div class="clearfix"></div>
           <div class="info text-center">
@@ -349,13 +380,6 @@
       </div><!--//container-->
     </footer><!--//footer-->
 
-
-    <!-- Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <script src="assets/js/flickity.pkgd.min.js"></script>
 
 
   </body>

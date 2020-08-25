@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+  <title>Cultural Business Training</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cultural Business Training organized in cooperation with the City of Tampere Employment and Growth Services is a series of events bringing together a multitude of cultures in our city and promote international background entrepreneurship.">
+  <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-status-bar" content="#da532c">
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic&display=swap' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap' rel='stylesheet' type='text/css'>
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/flickity.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- <script data-main="/assets/js/config.js" src="/assets/js/require.js"></script> -->
+  
+  <script src="assets/js/lazysizes.min.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+  <script src="https://unpkg.com/shufflejs@5"></script>
+
+  <script src="assets/js/jquery.ba-throttle-debounce.min.js" async></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <!-- <script type="text/javascript" src="assets/js/jquery.filterizr.min.js"></script> -->
+  <!-- https://www.youtube.com/watch?v=RQ1N_EP07xs -->
+ <!-- <script src='assets/js/datafetch.js'></script> -->
+  <!-- <script type='text/javascript'>
+  require(['config'],function(){
+    require(['members']);
+    console.info('Data recovered');
+  });
+  </script> -->
+  <!-- Javascript -->
+  <!-- <script data-main="/assets/js/members.config.js" src="/assets/js/require.js"></script> -->
+ <!--  <script>
+    require(['members.config'], function(){
+    
+      require(['main']);
+      require(['getData'], function(Y){
+          Y.getData();
+      });
+    });
+  </script> -->
+ <!-- <script src='assets/js/shuffle.min.js'></script> -->
+<!-- <script src="assets/js/client.js"></script> -->
+
+<style>
+  .grid-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "cook-grid-left cook-grid-right";
+}
+
+.cook-grid-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2.5fr;
+  gap: 1px 1px;
+  grid-template-areas: "description" "menu-picture";
+  grid-area: cook-grid-left;
+}
+
+.menu-picture { grid-area: menu-picture; }
+
+.description { grid-area: description; }
+
+.cook-grid-right {
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "dish-picture" "cook-picture" "service-type";
+  grid-area: cook-grid-right; */
+  
+  display: flex;
+    flex-direction: column;
+}
+
+.dish-picture { grid-area: dish-picture; }
+
+.cook-picture { grid-area: cook-picture; }
+
+.service-type { grid-area: service-type; }
+
+.description-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "service-description contact-description";
+}
+
+.service-description { grid-area: service-description; }
+
+.contact-description { grid-area: contact-description; }
+
+a[download] {
+  font-size: 1.7em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+a[download] span {
+  /* padding-left: 0.5em; */
+  font-size: smaller;
+  cursor: pointer;
+}
+a[download][href$=".pdf"]::before {
+  content: url(/assets/images/menu.svg);
+}
+a {
+  color: #3477db;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink;
+}
+a:focus, a:hover {
+  color: #1e90ff;
+  text-decoration: none;
+}
+a:active {
+  color: #1f3a93;
+}
+
+
+@media screen and (max-width: 500px) {
+  .grid-container {
+      display: flex;
+      flex-direction: column;
+  }
+  a[download] span {
+    font-size: small;
+  }
+}
+</style>
+
+</head>
+
+
+  <body data-spy="scroll">
+    
+    <!-- ******HEADER****** -->
+    <header id="header" class="header">
+      <div class="container">
+        <h1 class="logo pull-left">
+          <a href="/">
+            <span class="logo-title">Cultural Business Training</span>
+          </a>
+        </h1><!--//logo-->
+        <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button><!--//nav-toggle-->
+          </div><!--//navbar-header-->
+          <div class="navbar-collapse collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+              <li class="nav-item"><a class="scrollto" href="/index.html#about">About</a></li>
+              <li class="nav-item"><a class="scrollto" href="/index.html#calendar">Next Events</a></li>
+              <li class="nav-item"><a class="scrollto" href="/index.html#stories">Stories</a></li>
+              <li class="nav-item"><a class="scrollto" href="/index.html#crew">Crew</a></li>
+              <li class="nav-item"><a class="scrollto" href="/index.html#quide">Guide</a></li>
+              <li class="nav-item last"><a class="scrollto highlight" href="/members.html">Members</a></li>
+            </ul><!--//nav-->
+          </div><!--//navabr-collapse-->
+        </nav><!--//main-nav-->
+      </div>
+    </header><!--//header-->
+
+    
+
+    <!-- ******ABOUT****** -->
+    <section id="members" class="stories section">
+      <div class="container text-center">
+        <!-- <h2 class="title" id="demo" >Stories</h2> -->
+        <h2 class="title">Members</h2>
+     
+          
+       
+      </div>
+      <div class="container text-center">
+          <!-- <div class="row">
+            <div class="filters-group-wrap">
+              <div class="col-4@sm col-3@md filters-group">
+                <legend for="filters-search-input" class="filter-label">Search</legend>
+                <input class="textfield filter__search js-shuffle-search" type="search" id="filters-search-input" />
+              </div>
+              <div class="filters-group">
+                <legend class="filter-label">Filter</legend>
+                <div class="btn-group filter-options">
+                  <button class="btn btn--primary" data-group="Catering">Catering</button>
+                  <button class="btn btn--primary" data-group="Home delivery">Home delivery</button>
+                  <button class="btn btn--primary" data-group="Pick up service">Physical place/trailer</button>
+                </div>
+              </div>
+              <fieldset class="filters-group">
+                <legend class="filter-label">Sort</legend>
+                <div class="btn-group sort-options">
+                  <label class="btn active">
+                    <input type="radio" name="sort-value" value="dom" checked /> Default
+                  </label>
+                  <label class="btn">
+                    <input type="radio" name="sort-value" value="title" /> Title
+                  </label>
+                  <label class="btn">
+                    <input type="radio" name="sort-value" value="date-created" /> Date Created
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+          </div> -->
+        
+          <div id="loading" class="loading">
+            <div class="large-emoji">⌛</div>
+            <p>Loading...</p>
+          </div>
+          <div id="container">
+            <div id="grid" class="row my-shuffle">
+            </div>
+            <!-- <button onclick="systemAlert.systemAlertOpen('alert4')"></button>
+            <div class="member-modal member-modal-model member-modal--animated" member-modal-enter="zoomIn" member-modal-leave="zoomOut" member-modal-type="confirm" member-modal-mask="true" id="alert4">
+              <div class="member-modal__title">Company Name <button class="member-modal__close-button" onclick="systemAlert.systemAlertHide('alert4')"><i class="fa fa-close"></i></button></div>
+              <div class="member-modal__content">
+                <div class="grid-container">
+                  <div class="cook-grid-left">
+                    <div class="menu-picture">
+                        <img src="https://drive.google.com/thumbnail?id=1p-CGA4lQsrK9rgSo4Qj_i3IMaOfK_l1k" alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below">
+                        <div class="aspect aspect--16x9">
+                          <div class="aspect__inner">
+                            <span><i class="fa fa-location-arrow"></i>&nbsp;Itsenäisyydenkatu 8 C35 33500 Tampere</span>
+                            <address>Itsenäisyydenkatu 8 C35 33500 Tampere</address>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    <div class="description">
+                      <p>This is a description</p>
+                      <div class="download">
+                        <p>
+                          <a download href="manual.pdf"><span>Download menu</span></a>
+                        </p>
+                      </div>
+                      <div class="description-container">
+                        <div class="service-description">
+                          <span>Represented geographical area:</br><b>World</b></span></br>
+                          <span>Served food:</br><b>"Main dish, Snacks, Desert"</b></span></br>
+                          <span>Service type:</br><b>Physical place/trailer</b> </span></br>
+                        </div>
+                        <div class="contact-description">
+                          <span><i class="fa fa-phone"></i>&nbsp;<a href="mailto:contact@test.com">Testi</a></span></br>
+                          <span><i class="fa fa-envelope"></i>&nbsp;<a href="tel:[phone number]">Testi</a></span></br>
+                          <span><i class="fa fa-location-arrow"></i>&nbsp;Itsenäisyydenkatu 8 C35 33500 Tampere</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cook-grid-right">
+                    <div class="dish-picture">
+                          <div class="aspect aspect--16x9">
+                            <div class="aspect__inner">
+                              <img src="https://drive.google.com/uc?export=download&id=188yL_qeOi-cl1TnXIJKyNE643gyL49Uz" class="lazyloading" srcset="https://drive.google.com/uc?export=download&id=188yL_qeOi-cl1TnXIJKyNE643gyL49Uz" alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="cook-picture">
+                          <div class="aspect aspect--16x9">
+                            <div class="aspect__inner" style="position: relative;">
+                              <img src="https://drive.google.com/uc?export=download&id=1MYRKEV1NCuj1xvBTKxrB-hcSLu0S_gl9" class="lazyloading" srcset="https://drive.google.com/uc?export=download&id=1MYRKEV1NCuj1xvBTKxrB-hcSLu0S_gl9" alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="service-type">  
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <small><i class="fa fa-facebook"></i>&nbsp;<a href="#">Testi</a></small>&nbsp;&nbsp;
+                  <small><i class="fa fa-instagram"></i>&nbsp;<a href="#">Testi</a></small>&nbsp;&nbsp;
+                  <small><i class="fa fa-youtube"></i>&nbsp;<a href="#">Testi</a></small>
+                </div>
+              </div>
+              <div class="member-modal__selection">
+              <button class="member-modal__selection__button" onclick="location.href='pageurl.html';"><i class="fa fa-facebook"></i></button>
+              <button class="member-modal__selection__button" onclick="location.href='pageurl.html';"><i class="fa fa-instagram"></i></button>
+              <a class="mailto member-modal__selection__button" href="mailto:contact@test.com"><i class="fa fa-envelope"></i></a>
+              <a class="mailto member-modal__selection__button" href="tel:[phone number]"><i class="fa fa-phone"></i></a>
+              </div>
+            </div> -->
+
+          </div><!--//container-->
+          <!-- <pre class="text-center">INTRO TEXT ABOUT THE PAGE
+            Reasons for existence.
+            Service presented and promoted, etc.
+
+            
+
+            GUIDANCE FOR PAGE VISITORS - POTENTIAL CUSTOMERS
+            Interested in service / new experiences / different cultural food? - be in touch with the specific cook and agree on details.
+
+
+            UPCOMING EVENTS
+            Pop-up events of cooks, who has a membership.
+            Feed from facebook?? 
+
+            JOIN US AS A COOK
+            If you want to join us -> contact email (culturalbusinesstraining@gmail.com) 
+            Useful information before joining / Q&A type of part:
+            -	who can join?
+            -	fee ??eur/month
+            -	in exchange you get this and that
+
+          </pre> -->
+      <div class="container">
+        <p><small>Activity of CBT Cooks is done in cooperation with Tampere City Elintarvikevalvonta toimisto, this way it proves that activity and sales represented by cooks is legal (taxes payed, reports delivered, certification in order etc.) </small></p>
+      </div>
+    </section><!--//about-->
+
+
+    <!-- ******FOOTER****** -->
+    <footer class="footer">
+      <div class="social-media">
+        <div class="info text-center">
+          <ul class="social-icons list-inline">
+            <li><a href="mailto:culturalbusinesstraining@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+            <li><a href="https://www.facebook.com/culturalbusinesstraining/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="last"><a href="http://instagram.com/cultural_business_training/"><i class="fa fa-instagram"></i></a></li class="last">
+          </ul>
+        </div>
+      </div>
+      <div class="container text-center">
+        <small class="copyright">Cultural Business Training © 2020</small><br>
+        <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="https://harritaito.com/" target="_blank">harritaito</a></small>
+      </div><!--//container-->
+    </footer><!--//footer-->
+   
+
+    
+ <script src='assets/js/shuffle.min.js' defer></script>
+  <!-- <script>
+    // import Shuffle from 'shufflejs';
+
+// const shuffleInstance = new Shuffle(document.getElementById('grid'), {
+//   itemSelector: '.shuffle-item',
+//   sizer: '.my-shuffle-sizer',
+// });
+
+// vanhempi
+// vanhempi
+window.addEventListener('load', (event) => {
+console.log(document.getElementById('container'));
+console.log(document.getElementsByClassName('my-shuffle').item(0));
+    const shuffleInstance = new Shuffle(document.getElementsByClassName('my-shuffle')[0], {
+          itemSelector: '.shuffle-item',
+          sizer: '.my-sizer-element',
+          speed: 500,
+          easing: 'ease-out'
+      });
+
+      // shuffleInstance.Shuffle();
+		});
+  </script> -->
+
+ <!-- <script>
+   // create two functions to log out when something is clicked
+function clickMe() {
+    console.log("I'm clicked!");
+}
+  
+function clickMeAlso() {
+    console.log("I'm also clicked!");
+}
+
+// get the root element
+const root = document.getElementById("root");
+
+// create a <button> element (for onclick)
+const onClickBtn = document.createElement("button");
+onClickBtn.innerText = "onClick Button";
+
+// create a <button> element (for addEventListener()):
+const addListenerBtn = document.createElement("button");
+addListenerBtn.innerText = "addEventListner Button";
+
+// append the two buttons
+root.appendChild(onClickBtn);
+root.appendChild(addListenerBtn);
+
+// attach both functions to the onClickBtn
+onClickBtn.onclick = clickMe;
+onClickBtn.onclick = clickMeAlso;
+
+// attach both functions to the addListenerBtn
+addListenerBtn.addEventListener("click", clickMe);
+addListenerBtn.addEventListener("click", clickMeAlso);
+ </script> -->
+ <script>
+  function ok(id){
+    systemAlert.systemAlertHide(id);	
+  }
+  function closeAlert(id){
+    systemAlert.systemAlertHide(id);	
+  }
+  </script>
+  <script type='text/javascript'>
+    var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1YAlWrCUnNrF5n2TacFH-qGEgiehB6705tIUZ40CG2fk/edit?usp=sharing';
+    //   window.addEventListener('DOMContentLoaded', (event) => {
+    // 		fetchData();
+    // 	});
+          
+    // function fetchData(ev){
+        
+    //     let req = new Request(publicSpreadsheetUrl, {
+    //         method: 'GET'
+    //     });
+        
+    //     fetch(req)
+    //     .then( (response)=>{
+    //         if(response.ok){
+    //           console.log(response);
+    //             return response.json();
+    //         }else{
+    //             throw new Error('BAD HTTP stuff');
+    //         }
+    //     })
+    //     .then( (jsonData) =>{
+    //         console.log(jsonData);
+    // // var msg = JSON.parse(jsonData);
+    // var groups = jsonData.groups;
+    //   for (var i = 0; i < groups.length; i++) {
+    //     count = 0;
+    //     $("#list").append(' <div class="group" data-id="' + groups[i][1] + '"><div class="group-card"><div class="group-card__heading" style="justify-content: space-between;"><a href="#" onClick="" style="text-decoration:none;"><h2 data-name="'+ groups[i][1] + '">' + groups[i][1] + '</h2></a></div>'+
+    // '<div class="group-card__text">' + groups[i][2] + '</div>'+
+    //         '<div style="display: flex;justify-content: flex-end;"><button class="groups-button" onclick="joinGroup("' + groups[i][0] + '")"><span class="groups-button__text">Join group</span></button></div></div> </div>');
+  
+                    
+    //   }
+      
+    //   $("#loader").fadeOut();
+    //     })
+    //     .catch( (err) =>{
+    //         console.log('ERROR:', err.message);
+    //     });
+    // 	}
+    
+    
+      // (async function f() {
+      // 	let url = "https://docs.google.com/spreadsheets/d/1V2pPpu6ldpPfx4c7x1hStKhAmKdg0vBLVg4iENq_4lo/edit?usp=sharing";
+  
+      // 	let data = await (await fetch(url).catch(handleErr)).json();
+      // 		var countries = data.countries;
+      // 		var languages = data.languages;
+      // 		for(var i = 0; i < countries.length; i += 1) {
+      // 			countryMatches.push(countryList.find(o => o.value === countries[i]))
+      // 		}
+      // 		for(var i = 0; i < languages.length; i += 1) {
+      // 			languageMatches.push(langList.find(o => o.number === languages[i]))
+      // 		}
+      //     languageMatches = languageMatches.map(({ value, number, nativeName }) => ({ value: number.toString(), label: nativeName }));
+          
+      // 	if (data.code && data.code == 400) {
+      // 	//problem
+      // 	return;
+      // 	}
+  
+      
+  
+      // })();
+    
+        
+    function init() {    
+      // const shuffleInstance = new Shuffle(document.getElementsByClassName('my-shuffle')[0], {
+      //       itemSelector: '.shuffle-item',
+      //       sizer: '.my-sizer-element',
+      //       speed: 500,
+      //       easing: 'ease-out'
+      //   }); 
+        Tabletop.init( { 
+            key: publicSpreadsheetUrl, 
+            callback: showInfo, 
+            simpleSheet: true,
+            postProcess: function(element) {              
+              // Convert string date into Date date
+              // element["timestamp"] = Date.parse(element["timestamp"]);
+              console.log(element);
+              // Change date string format
+              var refactoreddate = element["timestamp"].slice(0,10).replace(/\//g,'-');
+              console.log(refactoreddate);
+              var year = refactoreddate.substring(5,9);
+              var month = refactoreddate.substring(0,1);
+              var day = refactoreddate.substring(2,4);
+              refactoreddate = year + '-' + month + '-' + day; 
+              element["timestamp"] = refactoreddate;
+              element["pictureofadish"]= element["pictureofadish"].replace(/open\?id=/g,'uc?export=download&id=');
+              element["pictureofthecook"]= element["pictureofthecook"].replace(/open\?id=/g,'uc?export=download&id=');
+              element["menupdf"]= element["menupdf"].replace(/open\?id=/g,'uc?export=download&id=');
+              element["pictureofthemenu"]= element["pictureofthemenu"].replace(/open\?id=/g,'uc?export=download&id=');
+            } 
+        } );
+    }    
+
+    
+    function showInfo(data, tabletop) {
+      document.getElementById("loading").style.display= "none";
+      console.log(data);
+      
+       
+      var app = document.querySelector('#container');
+      
+      // var shuffleFilters = document.createElement('div');
+      // shuffleFilters.className = 'row';
+      // app.appendChild(shuffleFilters);
+  
+      // var filtersWrap = document.createElement('div');
+      // filtersWrap.className = 'filters-group-wrap';
+      // shuffleFilters.appendChild(filtersWrap);
+  
+      // var searchGroup = document.createElement('div');
+      // searchGroup.className = 'col-4@sm col-3@md filters-group';
+      // filtersWrap.appendChild(searchGroup);
+  
+      // var searchLegend = document.createElement('legend');
+      // searchLegend.setAttribute('for', 'filters-search-input');
+      // searchLegend.className = 'filter-label';
+      // searchLegend.textContent = 'Search';
+      // searchGroup.appendChild(searchLegend);
+  
+      // var searchInput = document.createElement('input');
+      // searchInput.setAttribute('type', 'search');
+      // searchInput.setAttribute('id', 'filters-search-input');
+      // searchInput.className = 'textfield filter__search js-shuffle-search';
+      // searchLegend.appendChild(searchInput);
+  
+      // var filterGroup = document.createElement('div');
+      // filterGroup.className = 'filters-group';
+      // filtersWrap.appendChild(filterGroup);
+      
+      // var filterLegend = document.createElement('legend');
+      // filterLegend.className = 'filter-label';
+      // filterLegend.textContent = 'Filter';
+      // filterGroup.appendChild(filterLegend);
+      
+      // var filterButtonsGroup = document.createElement('div');
+      // filterButtonsGroup.className = 'btn-group filter-options';
+      // filterGroup.appendChild(filterButtonsGroup);
+  
+      // for(let i=0, len =data.length; i<len; i++){
+      //   var filterButton = document.createElement('button');
+      //   filterButton.className = 'btn btn--primary';
+      //   filterButton.setAttribute('data-group', '["' + (data[i].Category) + '"]')
+      //   filterButton.textContent = data[i].Category;
+      //   filterButtonsGroup.appendChild(filterButton);
+      // }
+      
+      // var sortGroup = document.createElement('fieldset');
+      // sortGroup.className = 'filters-group';
+      // filtersWrap.appendChild(sortGroup);
+  
+      // var sortLegend = document.createElement('legend');
+      // sortLegend.className = 'filter-label';
+      // sortLegend.textContent = 'Sort';
+      // sortGroup.appendChild(sortLegend);
+      
+      // var sortButtonsGroup = document.createElement('div');
+      // sortButtonsGroup.className = 'btn-group sort-options';
+      // sortGroup.appendChild(sortButtonsGroup);
+      
+      // var sortDefaultLabel = document.createElement('label');
+      // sortDefaultLabel.className = 'btn active';
+      // sortDefaultLabel.textContent = 'Default';
+      // sortButtonsGroup.appendChild(sortDefaultLabel);
+      
+      // var sortDefaultInput = document.createElement('input');
+      // sortDefaultInput.setAttribute('type', 'radio');
+      // sortDefaultInput.setAttribute('name', 'sort-value');
+      // sortDefaultInput.setAttribute('value', 'dom');
+      // sortDefaultLabel.appendChild(sortDefaultInput);
+      
+      // var sortTitleLabel = document.createElement('label');
+      // sortTitleLabel.className = 'btn';
+      // sortTitleLabel.textContent = 'Title';
+      // sortButtonsGroup.appendChild(sortTitleLabel);
+      
+      // var sortTitleInput = document.createElement('input');
+      // sortTitleInput.setAttribute('type', 'radio');
+      // sortTitleInput.setAttribute('name', 'sort-value');
+      // sortTitleInput.setAttribute('value', 'title');
+      // sortTitleLabel.appendChild(sortTitleInput);
+      
+      // var sortDateCreatedLabel = document.createElement('label');
+      // sortDateCreatedLabel.className = 'btn';
+      // sortDateCreatedLabel.textContent = 'Date Created';
+      // sortButtonsGroup.appendChild(sortDateCreatedLabel);
+      
+      // var sortDateCreatedInput = document.createElement('input');
+      // sortDateCreatedInput.setAttribute('type', 'radio');
+      // sortDateCreatedInput.setAttribute('name', 'sort-value');
+      // sortDateCreatedInput.setAttribute('value', 'date-created');
+      // sortDateCreatedLabel.appendChild(sortDateCreatedInput);
+  
+      var shuffleContainer = document.createElement('div');
+      shuffleContainer.setAttribute('id', 'grid');
+      shuffleContainer.className = 'row my-shuffle my-shuffle-container shuffle';
+      app.appendChild(shuffleContainer);
+  
+      for(let i=0, len=data.length; i<len; i++){
+        var figure = document.createElement('figure');
+        figure.className = 'col-3@xs col-4@sm col-3@md picture-item shuffle-item shuffle-item--visible';
+        figure.setAttribute('onclick', "systemAlert.systemAlertOpen('"+data[i]["ID number"]+"')");
+        figure.setAttribute('data-groups', data[i]["Service"]);
+        figure.setAttribute('data-date-created', data[i]["Timestamp"]);
+        figure.setAttribute('data-title', data[i]["Name"]);
+        
+  
+        var outer = document.createElement('div');
+        outer.className = 'picture-item__inner';
+        figure.appendChild(outer);
+  
+        var aspect = document.createElement('div');
+        aspect.className = 'aspect aspect--16x9';
+        outer.appendChild(aspect);
+  
+        var aspectInner = document.createElement('div');
+        aspectInner.className = 'aspect__inner';
+        aspect.appendChild(aspectInner);
+  
+        var img = document.createElement('img');
+        img.setAttribute('src', (data[i]["Picture of the cook"]));
+        img.className = 'lazyloading';
+        img.setAttribute('srcset',  (data[i]["Picture of the cook"]));
+        img.setAttribute('alt', "Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below");
+        aspectInner.appendChild(img);
+  
+        var inner = document.createElement('div');
+        inner.className = 'picture-item__details';
+        outer.appendChild(inner);
+  
+        var figcaption = document.createElement('figcaption');
+        figcaption.className = 'picture-item__title';
+        inner.appendChild(figcaption);
+  
+        var tags = document.createElement('p');
+        tags.className = 'picture-item__tags hidden@xs';
+        tags.textContent = (data[i].Category);
+        inner.appendChild(tags);
+  
+        var link = document.createElement('a');
+        link.setAttribute('target', "_blank");
+        link.setAttribute('rel', "noopener");
+        link.className = 'picture-item__link';
+        link.setAttribute('onclick', "systemAlert.systemAlertOpen('"+data[i]["ID number"]+"')");
+        link.textContent = (data[i]["Name"]);
+        figcaption.appendChild(link);
+        
+        shuffleContainer.appendChild(figure);
+
+          
+   
+        var member = document.querySelector('#container');
+        
+        var memberModal = document.createElement('div');
+        memberModal.setAttribute('id', data[i]["ID number"]);
+        memberModal.setAttribute('member-modal-enter', 'zoomIn');
+        memberModal.setAttribute('member-modal-leave', 'zoomOut');
+        memberModal.setAttribute('member-modal-type', 'confirm');
+        memberModal.setAttribute('member-modal-mask', 'true');
+        memberModal.className = 'member-modal member-modal--animated';
+        member.appendChild(memberModal);
+
+        var memberModalTitle = document.createElement('div');
+        memberModalTitle.className = 'member-modal__title';
+        memberModalTitle.textContent = (data[i]["Name"]);
+        memberModal.appendChild(memberModalTitle);
+
+        var memberModalClose = document.createElement('button');
+        memberModalClose.className = 'member-modal__close-button';
+        memberModalClose.setAttribute('onclick', 'systemAlert.systemAlertHide('+data[i]["ID number"]+')');
+        memberModalTitle.appendChild(memberModalClose);
+
+        var memberModalCloseIcon = document.createElement('i');
+        memberModalCloseIcon.className = 'fa fa-close';;
+        memberModalClose.appendChild(memberModalCloseIcon);
+
+        var memberModalContent = document.createElement('div');
+        memberModalContent.className = 'member-modal__content';
+        memberModal.appendChild(memberModalContent);
+
+        var memberModalContentGrid = document.createElement('div');
+        memberModalContentGrid.className = 'grid-container';
+        memberModalContent.appendChild(memberModalContentGrid);
+
+        var memberModalContentGridLeft = document.createElement('div');
+        memberModalContentGridLeft.className = 'cook-grid-left';
+        memberModalContentGrid.appendChild(memberModalContentGridLeft);
+
+        var memberModalContentGridRight = document.createElement('div');
+        memberModalContentGridRight.className = 'cook-grid-right';
+        memberModalContentGrid.appendChild(memberModalContentGridRight);
+      
+        var memberModalMenu = document.createElement('div');
+        memberModalMenu.className = '';
+        memberModalContentGridLeft.appendChild(memberModalMenu);
+      
+        if ((data[i]["Picture of the menu"])!== ''){
+          var memberModalMenuImg = document.createElement('img');
+          memberModalMenuImg.setAttribute('src', (data[i]["Picture of the menu"]));
+          memberModalMenuImg.className = 'lazyloading';
+          memberModalMenuImg.setAttribute('srcset',  (data[i]["Picture of the menu"]));
+          memberModalMenuImg.setAttribute('alt', "Menu of "+(data[i]["Name"])+"");
+          memberModalMenu.appendChild(memberModalMenuImg);
+        }
+        
+        // var memberModalMenuAspect = document.createElement('div');
+        // memberModalMenuAspect.className = 'aspect aspect--16x9';
+        // memberModalMenu.appendChild(memberModalMenuAspect);
+                
+        // var memberModalMenuAspectInner = document.createElement('div');
+        // memberModalMenuAspectInner.className = 'aspect__inner';
+        // memberModalMenuAspect.appendChild(memberModalMenuAspectInner);
+       
+        // var memberModalAddressTag = document.createElement('adress');
+        // memberModalAddressTag.textContent = (data[i]["Location"]);
+        // memberModalMenuAspectInner.appendChild(memberModalAddressTag);
+        
+        var memberModalDescription = document.createElement('div');
+        memberModalDescription.className = 'description';
+        memberModalContentGridLeft.appendChild(memberModalDescription);
+        
+        var memberModalDescriptionParagraph = document.createElement('p');
+        memberModalDescriptionParagraph.textContent = (data[i]["Description"]);
+        memberModalDescription.appendChild(memberModalDescriptionParagraph);
+        
+        if ((data[i]["MenuText"])!== ''){
+          var menuText = document.createElement('pre');
+          menuText.textContent = (data[i]["MenuText"]);
+          memberModalDescription.appendChild(menuText);
+        }
+        
+        if ((data[i]["MenuPDF"])!== ''){
+          var downloadLink = document.createElement('a');
+          downloadLink.setAttribute('download', '');
+          downloadLink.setAttribute('href',  (data[i]["MenuPDF"]));
+          // downloadLink.textContent = (data[i]["Description"]);
+          downloadLink.setAttribute('style', 'margin-top:0.5em;');
+          memberModalDescriptionParagraph.appendChild(downloadLink);
+
+          var downloadLinkText = document.createElement('span');
+          downloadLinkText.textContent = 'Download menu';
+          downloadLink.appendChild(downloadLinkText);
+        }
+        
+
+        if ((data[i]["Picture of a dish"])!== ''){
+        var memberModalDish = document.createElement('div');
+        memberModalDish.className = 'dish-picture';
+        memberModalContentGridRight.appendChild(memberModalDish);
+                
+        var memberModalDishAspect = document.createElement('div');
+        memberModalDishAspect.className = 'aspect aspect--16x9';
+        memberModalDish.appendChild(memberModalDishAspect);
+                
+        var memberModalDishAspectInner = document.createElement('div');
+        memberModalDishAspectInner.className = 'aspect__inner';
+        memberModalDishAspect.appendChild(memberModalDishAspectInner);
+
+        var memberModalDishImg = document.createElement('img');
+        memberModalDishImg.setAttribute('src', (data[i]["Picture of a dish"]));
+        memberModalDishImg.className = 'lazyloading';
+        memberModalDishImg.setAttribute('srcset',  (data[i]["Picture of a dish"]));
+        memberModalDishImg.setAttribute('alt', "Dish of "+(data[i]["Name"])+"");
+        memberModalDishAspectInner.appendChild(memberModalDishImg);
+        }
+        
+        if ((data[i]["Picture of the cook"])!== ''){
+          var memberModalCook = document.createElement('div');
+          memberModalCook.className = 'cook-picture';
+          memberModalContentGridRight.appendChild(memberModalCook);
+        
+          var memberModalCookAspect = document.createElement('div');
+          memberModalCookAspect.className = 'aspect aspect--16x9';
+          memberModalCook.appendChild(memberModalCookAspect);
+                  
+          var memberModalCookAspectInner = document.createElement('div');
+          memberModalCookAspectInner.className = 'aspect__inner';
+          memberModalCookAspectInner.setAttribute('style', 'position: relative;');
+          memberModalCookAspect.appendChild(memberModalCookAspectInner);
+          
+          var memberModalCookImg = document.createElement('img');
+          memberModalCookImg.setAttribute('src', (data[i]["Picture of the cook"]));
+          memberModalCookImg.className = 'lazyloading';
+          memberModalCookImg.setAttribute('srcset',  (data[i]["Picture of the cook"]));
+          memberModalCookImg.setAttribute('alt', "Cook of "+(data[i]["Name"])+"");
+          memberModalCookAspectInner.appendChild(memberModalCookImg);
+        }       
+        var memberModalService = document.createElement('div');
+        memberModalService.className = 'service-type';
+        memberModalContentGridRight.appendChild(memberModalService);
+
+        if ((data[i]["Cuisine"])!== ''){
+          // var memberModalAddressIcon = document.createElement('i');
+          // memberModalAddressIcon.className = 'fa fa-location-arrow';
+          // memberModalService.appendChild(memberModalAddressIcon);
+          var memberModalAreaTitle = document.createElement('span');
+          memberModalAreaTitle.textContent = "Cuisine: ";
+          memberModalService.appendChild(memberModalAreaTitle);
+          var memberModalAreaBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalAreaBreak);
+          var memberModalAreaAnswer = document.createElement('b');
+          memberModalAreaAnswer.textContent = (data[i]["Cuisine"]);
+          memberModalService.appendChild(memberModalAreaAnswer);
+          var memberModalServiceAreaBreakEnd = document.createElement('br');
+          memberModalService.appendChild(memberModalServiceAreaBreakEnd);
+        }
+
+        if ((data[i]["Food"])!== ''){
+          // var memberModalAddressIcon = document.createElement('i');
+          // memberModalAddressIcon.className = 'fa fa-location-arrow';
+          // memberModalService.appendChild(memberModalAddressIcon);
+          var memberModalServiceTypeTitle = document.createElement('span');
+          memberModalServiceTypeTitle.textContent = "Served food: ";
+          memberModalService.appendChild(memberModalServiceTypeTitle);
+          var memberModalServiceTypeBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalServiceTypeBreak);
+          var memberModalServiceTypeAnswer = document.createElement('b');
+          memberModalServiceTypeAnswer.textContent = (data[i]["Food"]);
+          memberModalService.appendChild(memberModalServiceTypeAnswer);
+          var memberModalServiceTypeBreakEnd = document.createElement('br');
+          memberModalService.appendChild(memberModalServiceTypeBreakEnd);
+        }
+
+        if ((data[i]["Service"])!== ''){
+          // var memberModalAddressIcon = document.createElement('i');
+          // memberModalAddressIcon.className = 'fa fa-location-arrow';
+          // memberModalService.appendChild(memberModalAddressIcon);
+          var memberModalServiceFoodTitle = document.createElement('span');
+          memberModalServiceFoodTitle.textContent = "Service type: ";
+          memberModalService.appendChild(memberModalServiceFoodTitle);
+          var memberModalServiceFoodBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalServiceFoodBreak);
+          var memberModalServiceFoodAnswer = document.createElement('b');
+          memberModalServiceFoodAnswer.textContent = (data[i]["Service"]);
+          memberModalService.appendChild(memberModalServiceFoodAnswer);
+          var memberModalServiceFoodBreakEnd = document.createElement('br');
+          memberModalService.appendChild(memberModalServiceFoodBreakEnd);
+        }
+        
+        if ((data[i]["Location"])!== ''){
+          var memberModalAddressTextBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalAddressTextBreak);
+          var memberModalAddressText = document.createElement('a');
+          memberModalAddressText.setAttribute('href', ("http://maps.google.com/?q="+data[i]["Location"]));
+          memberModalAddressText.textContent = (data[i]["Location"]);
+          memberModalService.appendChild(memberModalAddressText);
+        }
+        if ((data[i]["Phone"])!== ''){
+          var memberModalPhonenumberBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalPhonenumberBreak);
+          var memberModalPhonenumber = document.createElement('a');
+          memberModalPhonenumber.setAttribute('href', ("tel:"+data[i]["Phone"]));
+          memberModalPhonenumber.textContent = (data[i]["Phone"]);
+          memberModalService.appendChild(memberModalPhonenumber);
+        }
+        if ((data[i]["Email"])!== ''){
+          var memberModalAddressEmailBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalAddressEmailBreak);
+          var memberModalEmail = document.createElement('a');
+          memberModalEmail.setAttribute('href', ("mailto:"+data[i]["Email"]));
+          memberModalEmail.textContent = (data[i]["Email"]);
+          memberModalService.appendChild(memberModalEmail);
+        }
+
+        if ((data[i]["Webshop"])!== ''){
+          var memberModalAddressWebshopBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalAddressWebshopBreak);
+          var memberModalWebshop = document.createElement('a');
+          memberModalWebshop.setAttribute('href', (data[i]["Webshop"]));
+          memberModalWebshop.textContent = ("Online ordering");
+          memberModalService.appendChild(memberModalWebshop);
+        }
+        
+        var memberModalSelection = document.createElement('div');
+        memberModalSelection.className = 'member-modal__selection';
+        memberModal.appendChild(memberModalSelection);
+
+
+        // Bottom icons 
+        if ((data[i]["Facebook"])!== ''){
+          var memberModalSelectionFB = document.createElement('a');
+          memberModalSelectionFB.className = 'mailto member-modal__selection__button';
+          memberModalSelectionFB.setAttribute('href', (data[i]["Facebook"]));
+          memberModalSelection.appendChild(memberModalSelectionFB);
+
+          var memberModalSelectionFBIcon = document.createElement('i');
+          memberModalSelectionFBIcon.className = 'fa fa-facebook';;
+          memberModalSelectionFB.appendChild(memberModalSelectionFBIcon);
+        }
+        
+        if ((data[i]["Instagram"])!== ''){
+          var memberModalSelectionIG = document.createElement('a');
+          memberModalSelectionIG.className = 'mailto member-modal__selection__button';
+          memberModalSelectionIG.setAttribute('href', (data[i]["Instagram"]));
+          memberModalSelection.appendChild(memberModalSelectionIG);
+
+          var memberModalSelectionIGIcon = document.createElement('i');
+          memberModalSelectionIGIcon.className = 'fa fa-instagram';;
+          memberModalSelectionIG.appendChild(memberModalSelectionIGIcon);
+        }
+        
+        if ((data[i]["Email"])!== ''){
+          var memberModalSelectionEmail = document.createElement('a');
+          memberModalSelectionEmail.className = 'mailto member-modal__selection__button';
+          memberModalSelectionEmail.setAttribute('href', ("mailto:"+data[i]["Email"]));
+          memberModalSelection.appendChild(memberModalSelectionEmail);
+
+          var memberModalSelectionEmailIcon = document.createElement('i');
+          memberModalSelectionEmailIcon.className = 'fa fa-envelope';;
+          memberModalSelectionEmail.appendChild(memberModalSelectionEmailIcon);
+        }
+        
+        if ((data[i]["Phone"])!== ''){
+          var memberModalSelectionPhone = document.createElement('a');
+          memberModalSelectionPhone.className = 'mailto member-modal__selection__button';
+          memberModalSelectionPhone.setAttribute('href', ("tel:"+data[i]["Phone"]));
+          memberModalSelection.appendChild(memberModalSelectionPhone);
+
+          var memberModalSelectionPhoneIcon = document.createElement('i');
+          memberModalSelectionPhoneIcon.className = 'fa fa-phone';;
+          memberModalSelectionPhone.appendChild(memberModalSelectionPhoneIcon);
+        }
+        // //Bottom icons 
+
+      }
+
+
+      
+
+      var mySizerElement = document.createElement('div');
+        mySizerElement.className = 'col-1@sm col-1@xs my-sizer-element';
+        shuffleContainer.appendChild(mySizerElement);
+
+        // .replace(/thumbnail/g,'open')
+        //  !== ''
+
+        // <div class="service-type">  
+        //               <span>Represented geographical area:</br><b>World</b></span></br>
+        //               <span>Served food:</br><b>"Main dish, Snacks, Desert"</b></span></br>
+        //               <span>Service type:</br><b>Physical place/trailer</b> </span></br>
+        //               <p>
+        //                 <span><i class="fa fa-phone"></i>&nbsp;<a href="mailto:contact@test.com">Testi</a></span></br>
+        //                 <span><i class="fa fa-envelope"></i>&nbsp;<a href="tel:[phone number]">Testi</a></span>
+                        
+        //               </p>
+        //             </div>
+        //           </div>
+        //         </div>
+        //         <div class="text-center">
+        //           <small><i class="fa fa-facebook"></i>&nbsp;<a href="#">Testi</a></small>&nbsp;&nbsp;
+        //           <small><i class="fa fa-instagram"></i>&nbsp;<a href="#">Testi</a></small>&nbsp;&nbsp;
+        //           <small><i class="fa fa-youtube"></i>&nbsp;<a href="#">Testi</a></small>
+        //         </div>
+        //       </div>
+        //       <div class="member-modal__selection">
+        //       <button class="member-modal__selection__button" onclick="location.href='pageurl.html';"><i class="fa fa-facebook"></i></button>
+        //       <button class="member-modal__selection__button" onclick="location.href='pageurl.html';"><i class="fa fa-instagram"></i></button>
+        //       <a class="mailto member-modal__selection__button" href="mailto:contact@test.com"><i class="fa fa-envelope"></i></a>
+        //       <a class="mailto member-modal__selection__button" href="tel:[phone number]"><i class="fa fa-phone"></i></a>
+        //       </div>
+        //     </div>
+  
+  console.log('ykkönen');
+  
+    }
+    window.addEventListener('DOMContentLoaded', init);
+  
+      function handleErr(err) {
+        console.warn(err);
+        let resp = new Response(
+        JSON.stringify({
+          code: 400,
+          message: "Stupid network Error"
+        })
+        );
+        return resp;
+      }
+  </script>
+  <script>
+    var systemAlert = (function () {
+      return {
+          systemAlertOpen: function (id) {
+              var dom = $("#" + id);
+              this.systemAlertCenter(dom);
+              var name = dom.attr("member-modal-enter");
+              var type = dom.attr("member-modal-type");
+              var mask = dom.attr("member-modal-mask");
+              dom.addClass(name);
+              dom.show();
+              var that = this;
+              $("body").css({ "overflow-y": "hidden" });
+              if (mask == "true") {
+                  $("body").append("<div class='member-modal__mask' onclick=\"closeAlert('" + id + "')\"></div>");
+                  $(".member-modal__mask").fadeIn(300);
+              }
+              setTimeout(function () {
+                  dom.removeClass(name);
+              }, 300);
+              if (type == "toast") {
+                  setTimeout(function () {
+                      that.systemAlertHide(id);
+                  }, 1500);
+              }
+          },
+          systemAlertHide: function (id) {
+              if (typeof id == "undefined") {
+                  var dom = $(".member-modal");
+              } else {
+                  var dom = $("#" + id);
+              }
+              var name = dom.attr("member-modal-leave");
+              dom.addClass(name);
+              $(".member-modal__mask").fadeOut(300);
+              setTimeout(function () {
+                  dom.hide();
+                  dom.removeClass(name);
+                  $(".member-modal__mask").remove();
+                  $("body").css({ "overflow-y": "auto" });
+              }, 300);
+          },
+          systemAlertCenter: function (dom) {
+              var mgtop = parseFloat(dom.height() / 2);
+              dom.css({ top: "50%", "margin-top": "-" + mgtop + "px" });
+          },
+      };
+  })();
+  </script>
+  <!-- <script>
+    console.log('kakkonen');
+    var Shuffle = window.Shuffle;
+  var jQuery = window.jQuery;
+  
+  var myShuffle = new Shuffle(document.querySelector('.my-shuffle'), {
+    itemSelector: '.image-item',
+    sizer: '.my-sizer-element',
+    buffer: 1,
+  });
+  
+  jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
+    var input = evt.currentTarget;
+    if (input.checked) {
+      myShuffle.filter(input.value);
+    }
+  });
+  </script> -->
+  <script>
+    $(document).ready(function(){
+      $("address").each(function(){                         
+        var embed ="<iframe frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( $(this).text() ) +"&amp;output=embed'></iframe>";
+        $(this).html(embed);             
+      });
+    });
+  </script>
+  <script src='assets/js/shuffle.oma.js' defer></script>
+  <script src="/assets/js/app.js"></script>
+  </body>
+
+</html>

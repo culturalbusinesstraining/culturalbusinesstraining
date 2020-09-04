@@ -151,6 +151,45 @@ a:active {
   color: #1f3a93;
 }
 
+.title{
+  margin-bottom: 0;
+}
+.title--first{
+  margin-top: 0.5em;
+}
+
+.stories .title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+@media screen and (max-width: 767px) {
+  .stories .title:first-child {
+    margin-top: 1em;
+  }
+  .stories .title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+
+ .stories h1 {font-size: 0.8em;}
+ .stories h2.explainer {font-size: 0.8em;}
+ .stories  h3.explainer {font-size: 0.8em;}
+ 
+ .stories p.explainer {
+      margin: 0.35em 0;
+      line-height: 1.1;
+      font-size: 0.8em;
+  }
+  .title{
+  margin-bottom: 0;
+}
+  .title--first{
+    margin-top: 1em;
+  }
+
+}
 
 @media screen and (max-width: 500px) {
   .grid-container {
@@ -206,10 +245,21 @@ a:active {
     <section id="members" class="stories section">
       <div class="container text-center">
         <!-- <h2 class="title" id="demo" >Stories</h2> -->
-        <h2 class="title">Members</h2>
-     
-          
-       
+        <h1 class="title title--first">Members</h1>
+          <div class="text-center">
+            <p class="explainer">Cultural Business Training is highlighting selection of worldwide gastronomy available in Tampere region. Presented service will richen your everydaily experiences and/or special events in your life. 
+              We hope you enjoy the service, gain new gastronomy experiences, at the same time help us to highlight the local diversity and it’s potential.</p>
+          </div>
+          <div class="row">
+            <div class="col-sm-5 text-left text-left-sm">
+              <h3 class="title explainer">GUIDANCE FOR PAGE VISITORS</h3>
+              <p class="explainer">By browsing this page you will get introduced to different culture cuisine. Under every presented cook/company, you will find presented food/menu, available service, greetings from the cook as well as his/her contact details. Please reach out to each cook separately regarding placing the order and agree on other details. </p>
+            </div>
+            <div class="col-sm-7 text-right text-right-sm">
+              <h3 class="title explainer">JOIN US AS A COOK</h3>
+                <p class="explainer">If you are interested in joining network as a cook, please send us an email to <a href="mailto:culturalbusinesstraining@gmail.com">culturalbusinesstraining@gmail.com</a>. We will be in touch with you soon after to give you the joining guidance.</p>
+            </div>
+          </div>
       </div>
       <div class="container text-center">
           <!-- <div class="row">
@@ -247,6 +297,11 @@ a:active {
             <div class="large-emoji">⌛</div>
             <p>Loading...</p>
           </div>
+
+          <div class="container text-center">
+            
+          </div>
+
           <div id="container">
             <div id="grid" class="row my-shuffle">
             </div>
@@ -345,7 +400,7 @@ a:active {
 
           </pre> -->
       <div class="container">
-        <p><small>Activity of CBT Cooks is done in cooperation with Tampere City Elintarvikevalvonta toimisto, this way it proves that activity and sales represented by cooks is legal (taxes payed, reports delivered, certification in order etc.) </small></p>
+        <p class="explainer"><small>Activity of CBT Cooks is done in cooperation with Tampere City Elintarvikevalvonta toimisto, this way it proves that activity and sales represented by cooks is legal (taxes payed, reports delivered, certification in order etc.) </small></p>
       </div>
     </section><!--//about-->
 
@@ -707,7 +762,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
 
         var memberModalClose = document.createElement('button');
         memberModalClose.className = 'member-modal__close-button';
-        memberModalClose.setAttribute('onclick', 'systemAlert.systemAlertHide('+data[i]["ID number"]+')');
+        memberModalClose.setAttribute('onclick', 'closeAlert('+"'"+(data[i]["ID number"])+"'"+')');
         memberModalTitle.appendChild(memberModalClose);
 
         var memberModalCloseIcon = document.createElement('i');
@@ -783,27 +838,6 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         }
         
 
-        if ((data[i]["Picture of a dish"])!== ''){
-        var memberModalDish = document.createElement('div');
-        memberModalDish.className = 'dish-picture';
-        memberModalContentGridRight.appendChild(memberModalDish);
-                
-        var memberModalDishAspect = document.createElement('div');
-        memberModalDishAspect.className = 'aspect aspect--16x9';
-        memberModalDish.appendChild(memberModalDishAspect);
-                
-        var memberModalDishAspectInner = document.createElement('div');
-        memberModalDishAspectInner.className = 'aspect__inner';
-        memberModalDishAspect.appendChild(memberModalDishAspectInner);
-
-        var memberModalDishImg = document.createElement('img');
-        memberModalDishImg.setAttribute('src', (data[i]["Picture of a dish"]));
-        memberModalDishImg.className = 'lazyloading';
-        memberModalDishImg.setAttribute('srcset',  (data[i]["Picture of a dish"]));
-        memberModalDishImg.setAttribute('alt', "Dish of "+(data[i]["Name"])+"");
-        memberModalDishAspectInner.appendChild(memberModalDishImg);
-        }
-        
         if ((data[i]["Picture of the cook"])!== ''){
           var memberModalCook = document.createElement('div');
           memberModalCook.className = 'cook-picture';
@@ -876,7 +910,13 @@ addListenerBtn.addEventListener("click", clickMeAlso);
           var memberModalServiceFoodBreakEnd = document.createElement('br');
           memberModalService.appendChild(memberModalServiceFoodBreakEnd);
         }
-        
+        if ((data[i]["ID number"])!== ''){
+          var memberModalIDNumberTextBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalIDNumberTextBreak);
+          var memberModalIDNumberText = document.createElement('span');
+          memberModalIDNumberText.textContent = "Y-tunnus: " + (data[i]["ID number"]);
+          memberModalService.appendChild(memberModalIDNumberText);
+        }
         if ((data[i]["Location"])!== ''){
           var memberModalAddressTextBreak = document.createElement('br');
           memberModalService.appendChild(memberModalAddressTextBreak);
@@ -916,6 +956,27 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         memberModal.appendChild(memberModalSelection);
 
 
+        if ((data[i]["Picture of a dish"])!== ''){
+        var memberModalDish = document.createElement('div');
+        memberModalDish.className = 'dish-picture';
+        memberModalContentGridRight.appendChild(memberModalDish);
+                
+        var memberModalDishAspect = document.createElement('div');
+        memberModalDishAspect.className = 'aspect aspect--16x9';
+        memberModalDish.appendChild(memberModalDishAspect);
+                
+        var memberModalDishAspectInner = document.createElement('div');
+        memberModalDishAspectInner.className = 'aspect__inner';
+        memberModalDishAspect.appendChild(memberModalDishAspectInner);
+
+        var memberModalDishImg = document.createElement('img');
+        memberModalDishImg.setAttribute('src', (data[i]["Picture of a dish"]));
+        memberModalDishImg.className = 'lazyloading';
+        memberModalDishImg.setAttribute('srcset',  (data[i]["Picture of a dish"]));
+        memberModalDishImg.setAttribute('alt', "Dish of "+(data[i]["Name"])+"");
+        memberModalDishAspectInner.appendChild(memberModalDishImg);
+        }
+        
         // Bottom icons 
         if ((data[i]["Facebook"])!== ''){
           var memberModalSelectionFB = document.createElement('a');

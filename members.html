@@ -694,7 +694,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
       for(let i=0, len=data.length; i<len; i++){
         var figure = document.createElement('figure');
         figure.className = 'col-3@xs col-4@sm col-3@md picture-item shuffle-item shuffle-item--visible';
-        figure.setAttribute('onclick', "systemAlert.systemAlertOpen('"+data[i]["ID number"]+"')");
+        figure.setAttribute('onclick', "systemAlert.systemAlertOpen('"+data[i]["Timestamp"]+"')");
         figure.setAttribute('data-groups', data[i]["Service"]);
         figure.setAttribute('data-date-created', data[i]["Timestamp"]);
         figure.setAttribute('data-title', data[i]["Name"]);
@@ -736,7 +736,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         link.setAttribute('target', "_blank");
         link.setAttribute('rel', "noopener");
         link.className = 'picture-item__link';
-        link.setAttribute('onclick', "systemAlert.systemAlertOpen('"+data[i]["ID number"]+"')");
+        link.setAttribute('onclick', "systemAlert.systemAlertOpen('"+data[i]["Timestamp"]+"')");
         link.textContent = (data[i]["Name"]);
         figcaption.appendChild(link);
         
@@ -747,7 +747,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         var member = document.querySelector('#container');
         
         var memberModal = document.createElement('div');
-        memberModal.setAttribute('id', data[i]["ID number"]);
+        memberModal.setAttribute('id', data[i]["Timestamp"]);
         memberModal.setAttribute('member-modal-enter', 'zoomIn');
         memberModal.setAttribute('member-modal-leave', 'zoomOut');
         memberModal.setAttribute('member-modal-type', 'confirm');
@@ -762,7 +762,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
 
         var memberModalClose = document.createElement('button');
         memberModalClose.className = 'member-modal__close-button';
-        memberModalClose.setAttribute('onclick', 'closeAlert('+"'"+(data[i]["ID number"])+"'"+')');
+        memberModalClose.setAttribute('onclick', 'closeAlert('+"'"+(data[i]["Timestamp"])+"'"+')');
         memberModalTitle.appendChild(memberModalClose);
 
         var memberModalCloseIcon = document.createElement('i');

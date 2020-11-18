@@ -602,7 +602,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
     
     function showInfo(data, tabletop) {
       document.getElementById("loading").style.display= "none";
-      // console.log(data);
+      console.log(data);
       
        
       var app = document.querySelector('#container');
@@ -725,10 +725,10 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         aspect.appendChild(aspectInner);
   
         var img = document.createElement('img');
-        img.setAttribute('src', ("assets/images/cooktemp.png"));
+        img.setAttribute('src', (data[i]["Picture of the cook"])||"assets/images/cooktemp.png");
         img.className = 'lazyloading';
-        img.setAttribute('srcset',  (data[i]["Picture of the cook"]));
-        img.setAttribute('alt', "tempCook");
+        img.setAttribute('srcset',  (data[i]["Picture of the cook"])||"assets/images/cooktemp.png");
+        img.setAttribute('alt', "Cook of "+(data[i]["Name"])+"");
         aspectInner.appendChild(img);
   
         var inner = document.createElement('div');
@@ -870,7 +870,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
           memberModalCookImg.setAttribute('srcset',  (data[i]["Picture of the cook"]));
           memberModalCookImg.setAttribute('alt', "Cook of "+(data[i]["Name"])+"");
           memberModalCookAspectInner.appendChild(memberModalCookImg);
-        }       
+        }
         var memberModalService = document.createElement('div');
         memberModalService.className = 'service-type';
         memberModalContentGridRight.appendChild(memberModalService);

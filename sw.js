@@ -1,8 +1,8 @@
 // AppCachea tässä filussa, lisää tapoja: https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/
 // Joka releassissa versionumeroa päivitetään eli site-static-v(n)
 // static on etusivu - dynamic on muut
-const staticCacheName = 'site-static-v1.1.1';
-const dynamicCacheName = 'site-dynamic-v1.1.1';
+const staticCacheName = 'site-static-v1.1.2';
+const dynamicCacheName = 'site-dynamic-v1.1.2';
 
 // Tässä taulukossa sopisi olla vaa etusivun sisältö ja fallback mut koska nopee duunattu nii paljon kaikkee ylimääräistä (varsinkin /img)
 const assets = [

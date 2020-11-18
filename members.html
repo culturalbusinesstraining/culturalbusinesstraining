@@ -71,6 +71,19 @@
   </script> -->
  <!-- <script src='assets/js/shuffle.min.js'></script> -->
 <!-- <script src="assets/js/client.js"></script> -->
+<script src="assets/js/jquery.min.js"></script>
+<script data-main="/assets/js/config.js" src="/assets/js/require.js"></script>
+<script>
+  require(['config'], function(){
+    require(['bootstrap.min']);
+    require(['popper.min']);
+    require(['flickity.pkgd.min']);
+    require(['transition']);
+    require(['zoom']);
+    require(['shuffle.min']);
+    require(['main']);
+  });
+</script>
 
 <style>
   .grid-container {
@@ -226,13 +239,13 @@ a:active {
           </div><!--//navbar-header-->
           <div class="navbar-collapse collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
-              <li class="nav-item"><a class="scrollto" href="/index.html#about">About</a></li>
-              <li class="nav-item"><a class="scrollto" href="/index.html#calendar">Next Events</a></li>
-              <li class="nav-item"><a class="scrollto" href="/index.html#stories">Stories</a></li>
-              <li class="nav-item"><a class="scrollto" href="/index.html#crew">Crew</a></li>
-              <li class="nav-item"><a class="scrollto" href="/index.html#quide">Guide</a></li>
-              <li class="nav-item last"><a class="scrollto highlight" href="/members.html">Members</a></li>
+              <li class="active nav-item sr-only"><a href="#promo">Home</a></li>
+              <li class="nav-item"><a href="/index.html#about">About</a></li>
+              <li class="nav-item"><a href="/index.html#calendar">Next Events</a></li>
+              <li class="nav-item"><a href="/index.html#stories">Stories</a></li>
+              <li class="nav-item"><a href="/index.html#crew">Crew</a></li>
+              <li class="nav-item"><a href="/index.html#guide">Guide</a></li>
+              <li class="nav-item last"><a class="highlight" href="/members.html">Members</a></li>
             </ul><!--//nav-->
           </div><!--//navabr-collapse-->
         </nav><!--//main-nav-->
@@ -424,7 +437,7 @@ a:active {
    
 
     
- <script src='assets/js/shuffle.min.js' defer></script>
+ <!-- <script src='assets/js/shuffle.min.js' defer></script> -->
   <!-- <script>
     // import Shuffle from 'shufflejs';
 

@@ -696,6 +696,7 @@ p {
 
 button {
   appearance: button;
+  writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
   color: -internal-light-dark(buttontext, #aaaaaa);
@@ -894,6 +895,7 @@ button {
 
 .member-modal .member-modal__selection .mailto.member-modal__selection__button {
   appearance: button;
+  writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
   color: -internal-light-dark(buttontext, #aaaaaa);

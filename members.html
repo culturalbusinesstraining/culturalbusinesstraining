@@ -72,6 +72,7 @@
  <!-- <script src='assets/js/shuffle.min.js'></script> -->
 <!-- <script src="assets/js/client.js"></script> -->
 <script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.filterizr.min.js"></script>
 <script data-main="/assets/js/config.js" src="/assets/js/require.js"></script>
 <script>
   require(['config'], function(){
@@ -95,15 +96,16 @@
 }
 
 .cook-grid-left {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 2.5fr;
   gap: 1px 1px;
   grid-template-areas: "description" "menu-picture";
-  grid-area: cook-grid-left;
+  grid-area: cook-grid-left; */
+  display: block;
 }
 
-.menu-picture { grid-area: menu-picture; }
+/* .menu-picture { grid-area: menu-picture; } */
 
 .description { grid-area: description; }
 
@@ -148,7 +150,7 @@ a[download] span {
   font-size: smaller;
   cursor: pointer;
 }
-a[download][href$=".pdf"]::before {
+a[download]::before {
   content: url(/assets/images/menu.svg);
 }
 a {
@@ -213,6 +215,20 @@ a:active {
     font-size: small;
   }
 }
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
 </style>
 
 </head>
@@ -255,16 +271,10 @@ a:active {
 
     <!-- ******ABOUT****** -->
     <section id="members" class="stories section">
-      <div class="container text-center">
-        <!-- <h2 class="title" id="demo" >Stories</h2> -->
-        <h1 class="title title--first">Members</h1>
-          <div class="text-center">
-            <p class="explainer">Cultural Business Training is highlighting selection of worldwide gastronomy available in Tampere region. Presented service will richen your everydaily experiences and/or special events in your life. 
-              We hope you enjoy the service, gain new gastronomy experiences, at the same time help us to highlight the local diversity and it’s potential.</p>
-          </div>
+      <div class="container text-center">       
           <div class="row">
             <div class="col-sm-5 text-left text-left-sm">
-              <h3 class="title explainer">GUIDANCE FOR PAGE VISITORS</h3>
+              <h3 class="title explainer">WELCOME</h3>
               <p class="explainer">By browsing this page you will get introduced to different culture cuisine. Under every presented cook/company, you will find presented food/menu, available service, greetings from the cook as well as his/her contact details. Please reach out to each cook separately regarding placing the order and agree on other details. </p>
             </div>
             <div class="col-sm-7 text-right text-right-sm">
@@ -274,36 +284,14 @@ a:active {
           </div>
       </div>
       <div class="container text-center">
-          <!-- <div class="row">
-            <div class="filters-group-wrap">
-              <div class="col-4@sm col-3@md filters-group">
-                <legend for="filters-search-input" class="filter-label">Search</legend>
-                <input class="textfield filter__search js-shuffle-search" type="search" id="filters-search-input" />
-              </div>
-              <div class="filters-group">
-                <legend class="filter-label">Filter</legend>
-                <div class="btn-group filter-options">
-                  <button class="btn btn--primary" data-group="Catering">Catering</button>
-                  <button class="btn btn--primary" data-group="Home delivery">Home delivery</button>
-                  <button class="btn btn--primary" data-group="Pick up service">Physical place/trailer</button>
-                </div>
-              </div>
-              <fieldset class="filters-group">
-                <legend class="filter-label">Sort</legend>
-                <div class="btn-group sort-options">
-                  <label class="btn active">
-                    <input type="radio" name="sort-value" value="dom" checked /> Default
-                  </label>
-                  <label class="btn">
-                    <input type="radio" name="sort-value" value="title" /> Title
-                  </label>
-                  <label class="btn">
-                    <input type="radio" name="sort-value" value="date-created" /> Date Created
-                  </label>
-                </div>
-              </fieldset>
+          <div class="row">
+            <h1 class="title title--first">Members</h1>
+            <div class="text-center">
+              <p class="explainer">Cultural Business Training is highlighting selection of worldwide gastronomy available in Tampere region. Presented service will richen your everydaily experiences and/or special events in your life. 
+                We hope you enjoy the service, gain new gastronomy experiences, at the same time help us to highlight the local diversity and it’s potential.</p>
             </div>
-          </div> -->
+            
+          </div>
         
           <div id="loading" class="loading">
             <div class="large-emoji">⌛</div>
@@ -317,77 +305,7 @@ a:active {
           <div id="container">
             <div id="grid" class="row my-shuffle">
             </div>
-            <!-- <button onclick="systemAlert.systemAlertOpen('alert4')"></button>
-            <div class="member-modal member-modal-model member-modal--animated" member-modal-enter="zoomIn" member-modal-leave="zoomOut" member-modal-type="confirm" member-modal-mask="true" id="alert4">
-              <div class="member-modal__title">Company Name <button class="member-modal__close-button" onclick="systemAlert.systemAlertHide('alert4')"><i class="fa fa-close"></i></button></div>
-              <div class="member-modal__content">
-                <div class="grid-container">
-                  <div class="cook-grid-left">
-                    <div class="menu-picture">
-                        <img src="https://drive.google.com/thumbnail?id=1p-CGA4lQsrK9rgSo4Qj_i3IMaOfK_l1k" alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below">
-                        <div class="aspect aspect--16x9">
-                          <div class="aspect__inner">
-                            <span><i class="fa fa-location-arrow"></i>&nbsp;Itsenäisyydenkatu 8 C35 33500 Tampere</span>
-                            <address>Itsenäisyydenkatu 8 C35 33500 Tampere</address>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    <div class="description">
-                      <p>This is a description</p>
-                      <div class="download">
-                        <p>
-                          <a download href="manual.pdf"><span>Download menu</span></a>
-                        </p>
-                      </div>
-                      <div class="description-container">
-                        <div class="service-description">
-                          <span>Represented geographical area:</br><b>World</b></span></br>
-                          <span>Served food:</br><b>"Main dish, Snacks, Desert"</b></span></br>
-                          <span>Service type:</br><b>Physical place/trailer</b> </span></br>
-                        </div>
-                        <div class="contact-description">
-                          <span><i class="fa fa-phone"></i>&nbsp;<a href="mailto:contact@test.com">Testi</a></span></br>
-                          <span><i class="fa fa-envelope"></i>&nbsp;<a href="tel:[phone number]">Testi</a></span></br>
-                          <span><i class="fa fa-location-arrow"></i>&nbsp;Itsenäisyydenkatu 8 C35 33500 Tampere</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cook-grid-right">
-                    <div class="dish-picture">
-                          <div class="aspect aspect--16x9">
-                            <div class="aspect__inner">
-                              <img src="https://drive.google.com/uc?export=download&id=188yL_qeOi-cl1TnXIJKyNE643gyL49Uz" class="lazyloading" srcset="https://drive.google.com/uc?export=download&id=188yL_qeOi-cl1TnXIJKyNE643gyL49Uz" alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below">
-                            </div>
-                          </div>
-                    </div>
-                    <div class="cook-picture">
-                          <div class="aspect aspect--16x9">
-                            <div class="aspect__inner" style="position: relative;">
-                              <img src="https://drive.google.com/uc?export=download&id=1MYRKEV1NCuj1xvBTKxrB-hcSLu0S_gl9" class="lazyloading" srcset="https://drive.google.com/uc?export=download&id=1MYRKEV1NCuj1xvBTKxrB-hcSLu0S_gl9" alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below">
-                            </div>
-                          </div>
-                    </div>
-                    <div class="service-type">  
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <small><i class="fa fa-facebook"></i>&nbsp;<a href="#">Testi</a></small>&nbsp;&nbsp;
-                  <small><i class="fa fa-instagram"></i>&nbsp;<a href="#">Testi</a></small>&nbsp;&nbsp;
-                  <small><i class="fa fa-youtube"></i>&nbsp;<a href="#">Testi</a></small>
-                </div>
-              </div>
-              <div class="member-modal__selection">
-              <button class="member-modal__selection__button" onclick="location.href='pageurl.html';"><i class="fa fa-facebook"></i></button>
-              <button class="member-modal__selection__button" onclick="location.href='pageurl.html';"><i class="fa fa-instagram"></i></button>
-              <a class="mailto member-modal__selection__button" href="mailto:contact@test.com"><i class="fa fa-envelope"></i></a>
-              <a class="mailto member-modal__selection__button" href="tel:[phone number]"><i class="fa fa-phone"></i></a>
-              </div>
-            </div> -->
-
+            
           </div><!--//container-->
           <!-- <pre class="text-center">INTRO TEXT ABOUT THE PAGE
             Reasons for existence.
@@ -461,39 +379,7 @@ console.log(document.getElementsByClassName('my-shuffle').item(0));
 		});
   </script> -->
 
- <!-- <script>
-   // create two functions to log out when something is clicked
-function clickMe() {
-    console.log("I'm clicked!");
-}
-  
-function clickMeAlso() {
-    console.log("I'm also clicked!");
-}
-
-// get the root element
-const root = document.getElementById("root");
-
-// create a <button> element (for onclick)
-const onClickBtn = document.createElement("button");
-onClickBtn.innerText = "onClick Button";
-
-// create a <button> element (for addEventListener()):
-const addListenerBtn = document.createElement("button");
-addListenerBtn.innerText = "addEventListner Button";
-
-// append the two buttons
-root.appendChild(onClickBtn);
-root.appendChild(addListenerBtn);
-
-// attach both functions to the onClickBtn
-onClickBtn.onclick = clickMe;
-onClickBtn.onclick = clickMeAlso;
-
-// attach both functions to the addListenerBtn
-addListenerBtn.addEventListener("click", clickMe);
-addListenerBtn.addEventListener("click", clickMeAlso);
- </script> -->
+ 
  <script>
   function ok(id){
     systemAlert.systemAlertHide(id);	
@@ -504,69 +390,6 @@ addListenerBtn.addEventListener("click", clickMeAlso);
   </script>
   <script type='text/javascript'>
     var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1YAlWrCUnNrF5n2TacFH-qGEgiehB6705tIUZ40CG2fk/edit?usp=sharing';
-    //   window.addEventListener('DOMContentLoaded', (event) => {
-    // 		fetchData();
-    // 	});
-          
-    // function fetchData(ev){
-        
-    //     let req = new Request(publicSpreadsheetUrl, {
-    //         method: 'GET'
-    //     });
-        
-    //     fetch(req)
-    //     .then( (response)=>{
-    //         if(response.ok){
-    //           console.log(response);
-    //             return response.json();
-    //         }else{
-    //             throw new Error('BAD HTTP stuff');
-    //         }
-    //     })
-    //     .then( (jsonData) =>{
-    //         console.log(jsonData);
-    // // var msg = JSON.parse(jsonData);
-    // var groups = jsonData.groups;
-    //   for (var i = 0; i < groups.length; i++) {
-    //     count = 0;
-    //     $("#list").append(' <div class="group" data-id="' + groups[i][1] + '"><div class="group-card"><div class="group-card__heading" style="justify-content: space-between;"><a href="#" onClick="" style="text-decoration:none;"><h2 data-name="'+ groups[i][1] + '">' + groups[i][1] + '</h2></a></div>'+
-    // '<div class="group-card__text">' + groups[i][2] + '</div>'+
-    //         '<div style="display: flex;justify-content: flex-end;"><button class="groups-button" onclick="joinGroup("' + groups[i][0] + '")"><span class="groups-button__text">Join group</span></button></div></div> </div>');
-  
-                    
-    //   }
-      
-    //   $("#loader").fadeOut();
-    //     })
-    //     .catch( (err) =>{
-    //         console.log('ERROR:', err.message);
-    //     });
-    // 	}
-    
-    
-      // (async function f() {
-      // 	let url = "https://docs.google.com/spreadsheets/d/1V2pPpu6ldpPfx4c7x1hStKhAmKdg0vBLVg4iENq_4lo/edit?usp=sharing";
-  
-      // 	let data = await (await fetch(url).catch(handleErr)).json();
-      // 		var countries = data.countries;
-      // 		var languages = data.languages;
-      // 		for(var i = 0; i < countries.length; i += 1) {
-      // 			countryMatches.push(countryList.find(o => o.value === countries[i]))
-      // 		}
-      // 		for(var i = 0; i < languages.length; i += 1) {
-      // 			languageMatches.push(langList.find(o => o.number === languages[i]))
-      // 		}
-      //     languageMatches = languageMatches.map(({ value, number, nativeName }) => ({ value: number.toString(), label: nativeName }));
-          
-      // 	if (data.code && data.code == 400) {
-      // 	//problem
-      // 	return;
-      // 	}
-  
-      
-  
-      // })();
-    
         
     function init() {    
       // const shuffleInstance = new Shuffle(document.getElementsByClassName('my-shuffle')[0], {
@@ -594,7 +417,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
               element["pictureofadish"]= element["pictureofadish"].replace(/open\?id=/g,'uc?export=download&id=');
               element["pictureofthecook"]= element["pictureofthecook"].replace(/open\?id=/g,'uc?export=download&id=');
               element["menupdf"]= element["menupdf"].replace(/open\?id=/g,'uc?export=download&id=');
-              element["pictureofthemenu"]= element["pictureofthemenu"].replace(/open\?id=/g,'uc?export=download&id=');
+              // element["pictureofthemenu"]= element["pictureofthemenu"].replace(/open\?id=/g,'uc?export=download&id=');
             } 
         } );
     }    
@@ -705,8 +528,9 @@ addListenerBtn.addEventListener("click", clickMeAlso);
   
       for(let i=0, len=data.length; i<len; i++){
         var figure = document.createElement('figure');
-        figure.className = 'col-3@xs col-4@sm col-3@md picture-item shuffle-item shuffle-item--visible';
+        figure.className = 'col-3@xs col-4@sm col-3@md picture-item shuffle-item shuffle-item--visible filtr-item';
         figure.setAttribute('onclick', "systemAlert.systemAlertOpen('"+data[i]["Timestamp"]+"')");
+        figure.setAttribute('data-category', data[i]["Service"]);
         figure.setAttribute('data-groups', data[i]["Service"]);
         figure.setAttribute('data-date-created', data[i]["Timestamp"]);
         figure.setAttribute('data-title', data[i]["Name"]);
@@ -717,7 +541,7 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         figure.appendChild(outer);
   
         var aspect = document.createElement('div');
-        aspect.className = 'aspect aspect--16x9';
+        aspect.className = 'aspect aspect--16x10';
         outer.appendChild(aspect);
   
         var aspectInner = document.createElement('div');
@@ -769,8 +593,62 @@ addListenerBtn.addEventListener("click", clickMeAlso);
 
         var memberModalTitle = document.createElement('div');
         memberModalTitle.className = 'member-modal__title';
-        memberModalTitle.textContent = (data[i]["Name"]);
+        memberModalTitle.textContent = (data[i]["Name"]+'\xa0'+'-');
         memberModal.appendChild(memberModalTitle);
+
+        if ((data[i]["Facebook"])!== ''){
+          var memberModalTitleSoMeFacebookFirstBreak = document.createElement('span');
+          memberModalTitleSoMeFacebookFirstBreak.textContent = ('\xa0');
+          memberModalTitle.appendChild(memberModalTitleSoMeFacebookFirstBreak);
+          var memberModalTitleSoMeFacebookSmall = document.createElement('small');
+          memberModalTitle.appendChild(memberModalTitleSoMeFacebookSmall);
+          var memberModalTitleSoMeFacebookIcon = document.createElement('i');
+          memberModalTitleSoMeFacebookIcon.className = 'fa fa-facebook';
+          memberModalTitleSoMeFacebookSmall.appendChild(memberModalTitleSoMeFacebookIcon);
+          var memberModalTitleSoMeFacebookMidBreak = document.createElement('span');
+          memberModalTitleSoMeFacebookMidBreak.textContent = ('\xa0');
+          memberModalTitleSoMeFacebookSmall.appendChild(memberModalTitleSoMeFacebookMidBreak);
+          var memberModalTitleSoMeFacebookLink = document.createElement('a');
+          memberModalTitleSoMeFacebookLink.setAttribute('href', (data[i]["Facebook"]));
+          memberModalTitleSoMeFacebookLink.textContent = ("Facebook");
+          memberModalTitleSoMeFacebookSmall.appendChild(memberModalTitleSoMeFacebookLink);
+        }
+
+        if ((data[i]["Instagram"])!== ''){
+          var memberModalTitleSoMeInstagramFirstBreak = document.createElement('span');
+          memberModalTitleSoMeInstagramFirstBreak.textContent = ('\xa0');
+          memberModalTitle.appendChild(memberModalTitleSoMeInstagramFirstBreak);
+          var memberModalTitleSoMeInstagramSmall = document.createElement('small');
+          memberModalTitle.appendChild(memberModalTitleSoMeInstagramSmall);
+          var memberModalTitleSoMeInstagramIcon = document.createElement('i');
+          memberModalTitleSoMeInstagramIcon.className = 'fa fa-instagram';
+          memberModalTitleSoMeInstagramSmall.appendChild(memberModalTitleSoMeInstagramIcon);
+          var memberModalTitleSoMeInstagramMidBreak = document.createElement('span');
+          memberModalTitleSoMeInstagramMidBreak.textContent = ('\xa0');
+          memberModalTitleSoMeInstagramSmall.appendChild(memberModalTitleSoMeInstagramMidBreak);
+          var memberModalTitleSoMeInstagramLink = document.createElement('a');
+          memberModalTitleSoMeInstagramLink.setAttribute('href', (data[i]["Instagram"]));
+          memberModalTitleSoMeInstagramLink.textContent = ("Instagram");
+          memberModalTitleSoMeInstagramSmall.appendChild(memberModalTitleSoMeInstagramLink);
+        }
+
+        if ((data[i]["Youtube"])!== ''){
+          var memberModalTitleSoMeYoutubeFirstBreak = document.createElement('span');
+          memberModalTitleSoMeYoutubeFirstBreak.textContent = ('\xa0');
+          memberModalTitle.appendChild(memberModalTitleSoMeYoutubeFirstBreak);
+          var memberModalTitleSoMeYoutubeSmall = document.createElement('small');
+          memberModalTitle.appendChild(memberModalTitleSoMeYoutubeSmall);
+          var memberModalTitleSoMeYoutubeIcon = document.createElement('i');
+          memberModalTitleSoMeYoutubeIcon.className = 'fa fa-youtube';
+          memberModalTitleSoMeYoutubeSmall.appendChild(memberModalTitleSoMeYoutubeIcon);
+          var memberModalTitleSoMeYoutubeMidBreak = document.createElement('span');
+          memberModalTitleSoMeYoutubeMidBreak.textContent = ('\xa0');
+          memberModalTitleSoMeYoutubeSmall.appendChild(memberModalTitleSoMeYoutubeMidBreak);
+          var memberModalTitleSoMeYoutubeLink = document.createElement('a');
+          memberModalTitleSoMeYoutubeLink.setAttribute('href', (data[i]["Youtube"]));
+          memberModalTitleSoMeYoutubeLink.textContent = ("Youtube");
+          memberModalTitleSoMeYoutubeSmall.appendChild(memberModalTitleSoMeYoutubeLink);
+        }
 
         var memberModalClose = document.createElement('button');
         memberModalClose.className = 'member-modal__close-button';
@@ -797,18 +675,18 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         memberModalContentGridRight.className = 'cook-grid-right';
         memberModalContentGrid.appendChild(memberModalContentGridRight);
       
-        var memberModalMenu = document.createElement('div');
-        memberModalMenu.className = '';
-        memberModalContentGridLeft.appendChild(memberModalMenu);
+        // var memberModalMenu = document.createElement('div');
+        // memberModalMenu.className = '';
+        // memberModalContentGridLeft.appendChild(memberModalMenu);
       
-        if ((data[i]["Picture of the menu"])!== ''){
-          var memberModalMenuImg = document.createElement('img');
-          memberModalMenuImg.setAttribute('src', (data[i]["Picture of the menu"]));
-          memberModalMenuImg.className = 'lazyloading';
-          memberModalMenuImg.setAttribute('srcset',  (data[i]["Picture of the menu"]));
-          memberModalMenuImg.setAttribute('alt', "Menu of "+(data[i]["Name"])+"");
-          memberModalMenu.appendChild(memberModalMenuImg);
-        }
+        // if ((data[i]["Picture of the menu"])!== ''){
+        //   var memberModalMenuImg = document.createElement('img');
+        //   memberModalMenuImg.setAttribute('src', (data[i]["Picture of the menu"]));
+        //   memberModalMenuImg.className = 'lazyloading';
+        //   memberModalMenuImg.setAttribute('srcset',  (data[i]["Picture of the menu"]));
+        //   memberModalMenuImg.setAttribute('alt', "Menu of "+(data[i]["Name"])+"");
+        //   memberModalMenu.appendChild(memberModalMenuImg);
+        // }
         
         // var memberModalMenuAspect = document.createElement('div');
         // memberModalMenuAspect.className = 'aspect aspect--16x9';
@@ -850,27 +728,27 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         }
         
 
-        if ((data[i]["Picture of the cook"])!== ''){
-          var memberModalCook = document.createElement('div');
-          memberModalCook.className = 'cook-picture';
-          memberModalContentGridRight.appendChild(memberModalCook);
+        // if ((data[i]["Picture of the cook"])!== ''){
+        //   var memberModalCook = document.createElement('div');
+        //   memberModalCook.className = 'cook-picture';
+        //   memberModalContentGridRight.appendChild(memberModalCook);
         
-          var memberModalCookAspect = document.createElement('div');
-          memberModalCookAspect.className = 'aspect aspect--16x9';
-          memberModalCook.appendChild(memberModalCookAspect);
+        //   var memberModalCookAspect = document.createElement('div');
+        //   memberModalCookAspect.className = 'aspect aspect--16x10';
+        //   memberModalCook.appendChild(memberModalCookAspect);
                   
-          var memberModalCookAspectInner = document.createElement('div');
-          memberModalCookAspectInner.className = 'aspect__inner';
-          memberModalCookAspectInner.setAttribute('style', 'position: relative;');
-          memberModalCookAspect.appendChild(memberModalCookAspectInner);
+        //   var memberModalCookAspectInner = document.createElement('div');
+        //   memberModalCookAspectInner.className = 'aspect__inner';
+        //   memberModalCookAspectInner.setAttribute('style', 'position: relative;');
+        //   memberModalCookAspect.appendChild(memberModalCookAspectInner);
           
-          var memberModalCookImg = document.createElement('img');
-          memberModalCookImg.setAttribute('src', (data[i]["Picture of the cook"]));
-          memberModalCookImg.className = 'lazyloading';
-          memberModalCookImg.setAttribute('srcset',  (data[i]["Picture of the cook"]));
-          memberModalCookImg.setAttribute('alt', "Cook of "+(data[i]["Name"])+"");
-          memberModalCookAspectInner.appendChild(memberModalCookImg);
-        }
+        //   var memberModalCookImg = document.createElement('img');
+        //   memberModalCookImg.setAttribute('src', (data[i]["Picture of the cook"]));
+        //   memberModalCookImg.className = 'lazyloading';
+        //   memberModalCookImg.setAttribute('srcset',  (data[i]["Picture of the cook"]));
+        //   memberModalCookImg.setAttribute('alt', "Cook of "+(data[i]["Name"])+"");
+        //   memberModalCookAspectInner.appendChild(memberModalCookImg);
+        // }
         var memberModalService = document.createElement('div');
         memberModalService.className = 'service-type';
         memberModalContentGridRight.appendChild(memberModalService);
@@ -922,16 +800,29 @@ addListenerBtn.addEventListener("click", clickMeAlso);
           var memberModalServiceFoodBreakEnd = document.createElement('br');
           memberModalService.appendChild(memberModalServiceFoodBreakEnd);
         }
-        if ((data[i]["ID number"])!== ''){
+        if ((data[i]["Business name"])!== ''){
+          var memberModalBusinessNameNumberTextBreak = document.createElement('br');
+          memberModalService.appendChild(memberModalBusinessNameNumberTextBreak);
+          var memberModalBusinessNameNumberText = document.createElement('span');
+          memberModalBusinessNameNumberText.textContent = "Business name: " + (data[i]["Business name"]);
+          memberModalService.appendChild(memberModalBusinessNameNumberText);
+        }
+        if ((data[i]["ID number or Kevyt yrittäjä"])!== ''){
           var memberModalIDNumberTextBreak = document.createElement('br');
           memberModalService.appendChild(memberModalIDNumberTextBreak);
           var memberModalIDNumberText = document.createElement('span');
-          memberModalIDNumberText.textContent = "Y-tunnus: " + (data[i]["ID number"]);
+          memberModalIDNumberText.textContent = "Y-tunnus: " + (data[i]["ID number or Kevyt yrittäjä"]);
           memberModalService.appendChild(memberModalIDNumberText);
         }
         if ((data[i]["Location"])!== ''){
           var memberModalAddressTextBreak = document.createElement('br');
           memberModalService.appendChild(memberModalAddressTextBreak);
+          var memberModalAddressIcon = document.createElement('i');
+          memberModalAddressIcon.className = 'fa fa-location-arrow';
+          memberModalService.appendChild(memberModalAddressIcon);
+          var memberModalAddressMidBreak = document.createElement('span');
+          memberModalAddressMidBreak.textContent = ('\xa0');
+          memberModalAddressIcon.appendChild(memberModalAddressMidBreak);
           var memberModalAddressText = document.createElement('a');
           memberModalAddressText.setAttribute('href', ("http://maps.google.com/?q="+data[i]["Location"]));
           memberModalAddressText.textContent = (data[i]["Location"]);
@@ -940,6 +831,12 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         if ((data[i]["Phone"])!== ''){
           var memberModalPhonenumberBreak = document.createElement('br');
           memberModalService.appendChild(memberModalPhonenumberBreak);
+          var memberModalPhonenumberIcon = document.createElement('i');
+          memberModalPhonenumberIcon.className = 'fa fa-phone';
+          memberModalService.appendChild(memberModalPhonenumberIcon);
+          var memberModalPhonenumberMidBreak = document.createElement('span');
+          memberModalPhonenumberMidBreak.textContent = ('\xa0');
+          memberModalPhonenumberIcon.appendChild(memberModalPhonenumberMidBreak);
           var memberModalPhonenumber = document.createElement('a');
           memberModalPhonenumber.setAttribute('href', ("tel:"+data[i]["Phone"]));
           memberModalPhonenumber.textContent = (data[i]["Phone"]);
@@ -948,6 +845,12 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         if ((data[i]["Email"])!== ''){
           var memberModalAddressEmailBreak = document.createElement('br');
           memberModalService.appendChild(memberModalAddressEmailBreak);
+          var memberModalAddressEmailIcon = document.createElement('i');
+          memberModalAddressEmailIcon.className = 'fa fa-envelope';
+          memberModalService.appendChild(memberModalAddressEmailIcon);
+          var memberModalAddressEmailMidBreak = document.createElement('span');
+          memberModalAddressEmailMidBreak.textContent = ('\xa0');
+          memberModalAddressEmailIcon.appendChild(memberModalAddressEmailMidBreak);
           var memberModalEmail = document.createElement('a');
           memberModalEmail.setAttribute('href', ("mailto:"+data[i]["Email"]));
           memberModalEmail.textContent = (data[i]["Email"]);
@@ -971,10 +874,10 @@ addListenerBtn.addEventListener("click", clickMeAlso);
         if ((data[i]["Picture of a dish"])!== ''){
         var memberModalDish = document.createElement('div');
         memberModalDish.className = 'dish-picture';
-        memberModalContentGridRight.appendChild(memberModalDish);
+        memberModalContentGridLeft.appendChild(memberModalDish);
                 
         var memberModalDishAspect = document.createElement('div');
-        memberModalDishAspect.className = 'aspect aspect--16x9';
+        memberModalDishAspect.className = 'aspect';
         memberModalDish.appendChild(memberModalDishAspect);
                 
         var memberModalDishAspectInner = document.createElement('div');
@@ -1165,6 +1068,51 @@ addListenerBtn.addEventListener("click", clickMeAlso);
     });
   </script> -->
   <!-- <script src='assets/js/shuffle.oma.js' defer></script> -->
+  <!-- <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script> -->
+    
   <script src="/assets/js/app.js"></script>
   </body>
 

@@ -234,12 +234,9 @@ p {
   opacity: 0;
   visibility: hidden; }
 
-.picture-item {
-  height: 220px;
-  margin-top: 24px; }
-  .picture-item img {
-    display: block;
-    width: 100%; }
+.picture-item img {
+  display: block;
+  width: 100%; }
 
 @supports (object-fit: cover) {
   .picture-item img {
@@ -869,6 +866,15 @@ button {
   max-width: 100%;
   text-align: left;
   /* padding: 0px; */ }
+  .member-modal .member-modal__title .member-modal__title-text {
+    font-weight: 700;
+    max-width: 4em;
+    overflow: hidden; }
+  .member-modal .member-modal__title .member-modal__title-some {
+    font-weight: 700; }
+    @media screen and (max-width: 767px) {
+      .member-modal .member-modal__title .member-modal__title-some {
+        display: none; } }
 
 .member-modal .member-modal__content {
   /* padding: 20px;

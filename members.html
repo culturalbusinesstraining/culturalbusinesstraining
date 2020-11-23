@@ -290,8 +290,7 @@ a:active {
               <p class="explainer">Cultural Business Training is highlighting selection of worldwide gastronomy available in Tampere region. Presented service will richen your everydaily experiences and/or special events in your life. 
                 We hope you enjoy the service, gain new gastronomy experiences, at the same time help us to highlight the local diversity and it’s potential.</p>
             </div>
-            
-          </div>
+           
         
           <div id="loading" class="loading">
             <div class="large-emoji">⌛</div>
@@ -593,15 +592,22 @@ console.log(document.getElementsByClassName('my-shuffle').item(0));
 
         var memberModalTitle = document.createElement('div');
         memberModalTitle.className = 'member-modal__title';
-        memberModalTitle.textContent = (data[i]["Name"]+'\xa0'+'-');
         memberModal.appendChild(memberModalTitle);
+        var memberModalTitleText = document.createElement('span');
+        memberModalTitleText.className = 'member-modal__title-text';
+        memberModalTitleText.textContent = (data[i]["Name"]+'\xa0'+'\xa0'+'\xa0');
+        memberModalTitle.appendChild(memberModalTitleText);
+        
+        var memberModalTitleSoMe = document.createElement('span');
+        memberModalTitleSoMe.className = 'member-modal__title-some';
+        memberModalTitle.appendChild(memberModalTitleSoMe);
 
         if ((data[i]["Facebook"])!== ''){
           var memberModalTitleSoMeFacebookFirstBreak = document.createElement('span');
           memberModalTitleSoMeFacebookFirstBreak.textContent = ('\xa0');
-          memberModalTitle.appendChild(memberModalTitleSoMeFacebookFirstBreak);
+          memberModalTitleSoMe.appendChild(memberModalTitleSoMeFacebookFirstBreak);
           var memberModalTitleSoMeFacebookSmall = document.createElement('small');
-          memberModalTitle.appendChild(memberModalTitleSoMeFacebookSmall);
+          memberModalTitleSoMe.appendChild(memberModalTitleSoMeFacebookSmall);
           var memberModalTitleSoMeFacebookIcon = document.createElement('i');
           memberModalTitleSoMeFacebookIcon.className = 'fa fa-facebook';
           memberModalTitleSoMeFacebookSmall.appendChild(memberModalTitleSoMeFacebookIcon);
@@ -617,9 +623,9 @@ console.log(document.getElementsByClassName('my-shuffle').item(0));
         if ((data[i]["Instagram"])!== ''){
           var memberModalTitleSoMeInstagramFirstBreak = document.createElement('span');
           memberModalTitleSoMeInstagramFirstBreak.textContent = ('\xa0');
-          memberModalTitle.appendChild(memberModalTitleSoMeInstagramFirstBreak);
+          memberModalTitleSoMe.appendChild(memberModalTitleSoMeInstagramFirstBreak);
           var memberModalTitleSoMeInstagramSmall = document.createElement('small');
-          memberModalTitle.appendChild(memberModalTitleSoMeInstagramSmall);
+          memberModalTitleSoMe.appendChild(memberModalTitleSoMeInstagramSmall);
           var memberModalTitleSoMeInstagramIcon = document.createElement('i');
           memberModalTitleSoMeInstagramIcon.className = 'fa fa-instagram';
           memberModalTitleSoMeInstagramSmall.appendChild(memberModalTitleSoMeInstagramIcon);
@@ -635,9 +641,9 @@ console.log(document.getElementsByClassName('my-shuffle').item(0));
         if ((data[i]["Youtube"])!== ''){
           var memberModalTitleSoMeYoutubeFirstBreak = document.createElement('span');
           memberModalTitleSoMeYoutubeFirstBreak.textContent = ('\xa0');
-          memberModalTitle.appendChild(memberModalTitleSoMeYoutubeFirstBreak);
+          memberModalTitleSoMe.appendChild(memberModalTitleSoMeYoutubeFirstBreak);
           var memberModalTitleSoMeYoutubeSmall = document.createElement('small');
-          memberModalTitle.appendChild(memberModalTitleSoMeYoutubeSmall);
+          memberModalTitleSoMe.appendChild(memberModalTitleSoMeYoutubeSmall);
           var memberModalTitleSoMeYoutubeIcon = document.createElement('i');
           memberModalTitleSoMeYoutubeIcon.className = 'fa fa-youtube';
           memberModalTitleSoMeYoutubeSmall.appendChild(memberModalTitleSoMeYoutubeIcon);
@@ -913,8 +919,8 @@ console.log(document.getElementsByClassName('my-shuffle').item(0));
           var memberModalSelectionIGIcon = document.createElement('i');
           memberModalSelectionIGIcon.className = 'fa fa-instagram';;
           memberModalSelectionIG.appendChild(memberModalSelectionIGIcon);
-        }
-        
+        } 
+
         if ((data[i]["Email"])!== ''){
           var memberModalSelectionEmail = document.createElement('a');
           memberModalSelectionEmail.className = 'mailto member-modal__selection__button';
@@ -924,6 +930,17 @@ console.log(document.getElementsByClassName('my-shuffle').item(0));
           var memberModalSelectionEmailIcon = document.createElement('i');
           memberModalSelectionEmailIcon.className = 'fa fa-envelope';;
           memberModalSelectionEmail.appendChild(memberModalSelectionEmailIcon);
+            if ((data[i]["Youtube"])!== ''){
+            memberModalSelection.removeChild(memberModalSelectionEmail);
+            var memberModalSelectionYT = document.createElement('a');
+            memberModalSelectionYT.className = 'mailto member-modal__selection__button';
+            memberModalSelectionYT.setAttribute('href', (data[i]["Youtube"]));
+            memberModalSelection.appendChild(memberModalSelectionYT);
+
+            var memberModalSelectionYTIcon = document.createElement('i');
+            memberModalSelectionYTIcon.className = 'fa fa-youtube';;
+            memberModalSelectionYT.appendChild(memberModalSelectionYTIcon);
+          }
         }
         
         if ((data[i]["Phone"])!== ''){
